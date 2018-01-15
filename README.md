@@ -1,8 +1,8 @@
 # QMIS 230: Business Problem Solving I in Visual Basic
 
 - Instructor: Mohammad AlMarzouq
-- Syllabus: bit.ly/mis230_syl
-- Slack: cbaqmis.slack.com (#mis230)
+- Syllabus: http://bit.ly/mis230_syl
+- Slack: http://cbaqmis.slack.com (#mis230)
 
 # Course Content
 
