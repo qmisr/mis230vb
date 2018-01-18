@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>week1 slides</title>
+<title>week2 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,36 +11905,9 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>Computers are incredibly fast, accurate, and stupid.
-Human beings are incredibly slow, inaccurate, and brilliant.
-Together they are powerful beyond imagination. 
-
-- Albert Einstein</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-are-computers?">What are computers?<a class="anchor-link" href="#What-are-computers?">&#182;</a></h1><p>A machine that stores and manipulates information under the control of a <strong>changeable program</strong></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Where-can-computers-be-found?">Where can computers be found?<a class="anchor-link" href="#Where-can-computers-be-found?">&#182;</a></h1><ul>
-<li>Calculators</li>
-<li>Gas pumps</li>
-<li>Cashiers</li>
-<li>Cars</li>
-<li>TVs and Electronics</li>
-<li>...etc.</li>
+<h1 id="Development-Environment">Development Environment<a class="anchor-link" href="#Development-Environment">&#182;</a></h1><ul>
+<li>You can use text editors like notepad to write your programs</li>
+<li>Alternatively you can use Integrated Development Environments (IDE) to make your life easier</li>
 </ul>
 
 </div>
@@ -11944,18 +11917,16 @@ Together they are powerful beyond imagination.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Computer-System">Computer System<a class="anchor-link" href="#Computer-System">&#182;</a></h1><p><img src="img/computer_system.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-Is-a-Program?">What Is a Program?<a class="anchor-link" href="#What-Is-a-Program?">&#182;</a></h1><ul>
-<li>Detailed step-by-step instructions telling a computer <strong>exactly</strong> what to do.</li>
-<li>A Computer is just a machine to carry out execution of programs.</li>
+<h1 id="Visual-Studio-(VS)">Visual Studio (VS)<a class="anchor-link" href="#Visual-Studio-(VS)">&#182;</a></h1><ul>
+<li>We will use visual studio as our IDE</li>
+<li>Available for both Mac and PC<ul>
+<li>Since we are working on VB, you have to use the PC version on mac<ul>
+<li>Use <a href="https://www.parallels.com">parallels</a> to get it to work</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Get Visual Studio Community edition for free <a href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=15&amp;page=defaultinstall">here</a></li>
 </ul>
 
 </div>
@@ -11965,132 +11936,558 @@ Together they are powerful beyond imagination.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Computers-as-Universal-Machines">Computers as Universal Machines<a class="anchor-link" href="#Computers-as-Universal-Machines">&#182;</a></h1><ul>
-<li>All computers can be instructed to perform what other computers do:<ul>
-<li>Depends on What hardware is available to control</li>
-<li>They might also differ in how fast they execute it</li>
+<h1 id="Starting-Projects-in-VS">Starting Projects in VS<a class="anchor-link" href="#Starting-Projects-in-VS">&#182;</a></h1><ul>
+<li>You create programs by creating projects in VS</li>
+<li>A Project is just a directory containing the source files and configuration files needed by the IDE
+<img src="img/ideproject.png" alt=""></li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Project-Types">Project Types<a class="anchor-link" href="#Project-Types">&#182;</a></h1><ul>
+<li>You set the program type by selecting the language, and type of project</li>
+<li>Change <strong><em>Name</em></strong> to set the name of your project</li>
+<li><strong>*Location</strong> is where you can find your project directory<ul>
+<li>The project directory will have the same name as the project</li>
+</ul>
+</li>
+<li>You can share your project by simply sharing the directory of the project</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/ideproject2.png" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Types-of-Projects-(Examples)">Types of Projects (Examples)<a class="anchor-link" href="#Types-of-Projects-(Examples)">&#182;</a></h1><ul>
+<li>Console</li>
+<li>Windows Forms App (.NET Framework)</li>
+<li>ASP.NET Web Application</li>
+<li>... etc</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Console">Console<a class="anchor-link" href="#Console">&#182;</a></h1><ul>
+<li>Simplest form of program, computer doesn't do anything unless you instruct it to</li>
+<li>Used mostly to perform quick tasks and create server applications</li>
+<li>User interaction is not expected</li>
+<li>Will perform instructions sequentially</li>
+<li>Use this to get quick output from the computer</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Windows-Forms-App-(.NET-Framework)">Windows Forms App (.NET Framework)<a class="anchor-link" href="#Windows-Forms-App-(.NET-Framework)">&#182;</a></h1><ul>
+<li>A Windows based application the uses GUI for user interaction</li>
+<li>Event driven</li>
+<li>Making the window, buttons, and controls is handled for you<ul>
+<li>You tell the computer what to do if an event occurs</li>
+<li>An event example is a button click or text input</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Program-Execution">Program Execution<a class="anchor-link" href="#Program-Execution">&#182;</a></h1><p><img src="img/computer_system2.png" alt=""></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programming-Languages">Programming Languages<a class="anchor-link" href="#Programming-Languages">&#182;</a></h1><ul>
-<li>The means in which humans can write instructions to computers<ul>
-<li>This is the human readable part</li>
-<li>Why do we need it? why not use english?</li>
-</ul>
-</li>
-<li>Compilers and interpreters will convert it to machine<ul>
-<li>This is the machine readable part</li>
-</ul>
-</li>
-<li>Programs can be distributed in <ul>
-<li>Human readable form, called source code</li>
-<li>Machine readable form, called binary</li>
-</ul>
-</li>
+<h1 id="ASP.NET-Web-Application">ASP.NET Web Application<a class="anchor-link" href="#ASP.NET-Web-Application">&#182;</a></h1><ul>
+<li>A browser based application</li>
+<li>Expected to run on a web server</li>
+<li>Client/Server Request/Response model</li>
+<li>Not covered this course</li>
 </ul>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Keep-in-mind-that-programs-come-in-different-forms!">Keep in mind that programs come in different forms!<a class="anchor-link" href="#Keep-in-mind-that-programs-come-in-different-forms!">&#182;</a></h2>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programming-Languages-Cont.">Programming Languages Cont.<a class="anchor-link" href="#Programming-Languages-Cont.">&#182;</a></h1><ul>
-<li>There are many available:<ul>
-<li>VB/C#/F#</li>
-<li>C/C++</li>
-<li>Python/Ruby/PHP/Perl/Javascript</li>
-<li>Java</li>
-<li>Swift</li>
-<li>...etc</li>
-</ul>
-</li>
+<h1 id="Our-First-Windows-Forms-Program">Our First Windows Forms Program<a class="anchor-link" href="#Our-First-Windows-Forms-Program">&#182;</a></h1><ul>
+<li>Create a <strong><em>Windows Forms</em></strong> project named "HelloWorld"</li>
+<li>Start the program by clicking the <strong><em>Start</em></strong> button.
+<img src="img/start.png" alt=""></li>
 </ul>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Can-you-explain-what-is-happening?">Can you explain what is happening?<a class="anchor-link" href="#Can-you-explain-what-is-happening?">&#182;</a></h2>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programming-Languages-Cont.">Programming Languages Cont.<a class="anchor-link" href="#Programming-Languages-Cont.">&#182;</a></h1><ul>
-<li>All can perform the same tasks</li>
-<li>They differ in:<ul>
-<li>Syntax: Vocabulary used to construct statements</li>
-<li>Symmatics: The meaning of the statements</li>
+<h1 id="Our-Second-Program">Our Second Program<a class="anchor-link" href="#Our-Second-Program">&#182;</a></h1><ul>
+<li>Create a <strong>Console</strong> project and name it <strong>HelloConsole</strong></li>
+<li>What is different about this project?</li>
+<li>Start the project and see what happens.<ul>
+<li>Can you explain what is going on?</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Program-Structure">Program Structure<a class="anchor-link" href="#Program-Structure">&#182;</a></h1><ul>
-<li>Programs consist of <strong><em>statements and data</em></strong></li>
-<li>We write statements to perform tasks that handle and produce data</li>
-<li>The statements are executed sequentially<ul>
-<li>Most likely top to bottom, left to right</li>
-</ul>
-</li>
-<li>A program consists of a single or many statements</li>
-<li>To execute a program<ul>
-<li>Must be fed to an interpreter to execute</li>
-<li>Compiled to binary then executed</li>
-</ul>
-</li>
-</ul>
+<h1 id="The-Console-Program">The Console Program<a class="anchor-link" href="#The-Console-Program">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Module</span> <span class="nn">Module1</span>
 
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-Program">Example Program<a class="anchor-link" href="#Example-Program">&#182;</a></h1><div class="highlight"><pre><span></span><span class="c">&#39; program in VB</span>
-<span class="k">Dim</span> <span class="n">msg</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Hello {0}! , txtBox.text)</span>
-<span class="s">MsgBox(msg)</span>
+    <span class="k">Sub</span> <span class="nf">Main</span><span class="p">()</span>
+
+    <span class="k">End</span> <span class="k">Sub</span>
+
+<span class="k">End</span> <span class="k">Module</span>
 </pre></div>
-<div class="highlight"><pre><span></span><span class="c1"># Program in Python</span>
-<span class="n">name</span> <span class="o">=</span> <span class="n">readline</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello {}!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Console-Program-Cont.">The Console Program Cont.<a class="anchor-link" href="#The-Console-Program-Cont.">&#182;</a></h1><ul>
+<li>The program does nothing!</li>
+<li><strong>Main</strong> is the starting point for the program<ul>
+<li>All instruction you write inside <strong>Main</strong> and before <strong>End Sub</strong> is executed</li>
+<li>Nothing else is done by the computer</li>
+</ul>
+</li>
+<li>Let's tell the computer to type something for us</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Updated-Console-Program">Updated Console Program<a class="anchor-link" href="#Updated-Console-Program">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Module</span> <span class="nn">Module1</span>
+
+    <span class="k">Sub</span> <span class="nf">Main</span><span class="p">()</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+
+<span class="k">End</span> <span class="k">Module</span>
+</pre></div>
+<p>Run it and explain what happend</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Updated-Console-Program">Updated Console Program<a class="anchor-link" href="#Updated-Console-Program">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Module</span> <span class="nn">Module1</span>
+
+    <span class="k">Sub</span> <span class="nf">Main</span><span class="p">()</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+         <span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+
+<span class="k">End</span> <span class="k">Module</span>
+</pre></div>
+<p>Now What is happening?</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Statements">The Statements<a class="anchor-link" href="#The-Statements">&#182;</a></h1><h2 id="Console.Out.WriteLine">Console.Out.WriteLine<a class="anchor-link" href="#Console.Out.WriteLine">&#182;</a></h2><ul>
+<li>This statement is used to output text</li>
+<li>You put the text inside the parantheses and the computer will display it</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Statements">The Statements<a class="anchor-link" href="#The-Statements">&#182;</a></h1><h2 id="Console.In.ReadLine">Console.In.ReadLine<a class="anchor-link" href="#Console.In.ReadLine">&#182;</a></h2><ul>
+<li>This is an input statement</li>
+<li>It tells the computer to wait for the user to type some text on the keyboard</li>
+<li>Then what will it do with the text?</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
+<li>Try to display what the user types in the keyboard as output</li>
+<li>Can you add a message to let the user know what he/she needs to do?</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h1><ul>
+<li>When getting input, we need to hold it somewhere to be able to use it</li>
+<li>This is where variables come in</li>
+<li>A Variable is like a bucket that holds data/input so we can use it elsewhere in the program</li>
+<li>Any input that is not placed in a variable is lost!</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-Variables-in-VB">Using Variables in VB<a class="anchor-link" href="#Using-Variables-in-VB">&#182;</a></h1><ol>
+<li>You have to declare it first</li>
+<li>You assign the input/data/result to the variable</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-a-Declaration?">What is a Declaration?<a class="anchor-link" href="#What-is-a-Declaration?">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">myText</span> <span class="ow">as</span> <span class="kt">String</span>
+</pre></div>
+<ul>
+<li><strong>Dim</strong> stands for <strong>declare in memory</strong></li>
+<li>Tells the computer to keep some space in memory to store data in of a specific type (called <strong>data type</strong>), what is it here?</li>
+<li>Gives it a name so we can refer to it, what is it here?</li>
+<li>Where do you think we should place this statement in the program?</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-an-Assignment?">What is an Assignment?<a class="anchor-link" href="#What-is-an-Assignment?">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">myText</span> <span class="o">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span>
+</pre></div>
+<ul>
+<li>Store whatever is on the right of the <strong>=</strong> operator, in the variable on the left</li>
+<li>Where should we place this statement?</li>
+<li>What do you think is the type of data returned by <strong>ReadLine</strong>?<ul>
+<li>Data types must match or can be converted.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Updated-Program">The Updated Program<a class="anchor-link" href="#The-Updated-Program">&#182;</a></h1><ul>
+<li>No need to show the sub main part:<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">myText</span> <span class="ow">As</span> <span class="kt">String</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Please type message:&quot;</span><span class="p">)</span>
+<span class="n">myText</span> <span class="o">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">Out</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">myText</span><span class="p">)</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">In</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Review-of-Concepts">Review of Concepts<a class="anchor-link" href="#Review-of-Concepts">&#182;</a></h1><ul>
+<li>Console vs Windows Forms vs Web apps</li>
+<li>Project creation and execution</li>
+<li>Variables and data types</li>
+<li>Declaration and assignment</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hello-World-in-Windows-Forms">Hello World in Windows Forms<a class="anchor-link" href="#Hello-World-in-Windows-Forms">&#182;</a></h1><ul>
+<li>Open your old windows form project, or create a new one named <strong>Hello World</strong></li>
+<li>Look at form1<ul>
+<li>This is known as the design view
+<img src="img/designview.png" alt=""></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hello-World-in-Windows-Forms">Hello World in Windows Forms<a class="anchor-link" href="#Hello-World-in-Windows-Forms">&#182;</a></h1><ul>
+<li>Double click anywhere on Form1</li>
+<li>This will open the coding view of the project
+<img src="img/codeview.png" alt=""></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-Form1_load?">What is Form1_load?<a class="anchor-link" href="#What-is-Form1_load?">&#182;</a></h1><ul>
+<li>This is known as an event sub</li>
+<li>Remember <strong>Main()</strong> from console projects?<ul>
+<li>Form1_load is similar to it</li>
+<li>It is executed only when Form1 is loaded</li>
+</ul>
+</li>
+<li>This is known as an event sub and it is part of event based programming</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-Form1_load?">What is Form1_load?<a class="anchor-link" href="#What-is-Form1_load?">&#182;</a></h1><ul>
+<li>In event based programming you do not execute the execution of the application</li>
+<li>The windows, buttons, forms, and all other GUI objects are already built for you</li>
+<li>Instead, as a programmer, you write subs that are executed when the user does specific actions</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-Form1_load?">What is Form1_load?<a class="anchor-link" href="#What-is-Form1_load?">&#182;</a></h1><ul>
+<li>For example, in Form1_load, the user starts the application, and Form1 is loaded</li>
+<li>The event sub always consists of two parts, the name of the object/control, and the action that the user must do for the program to execute this code</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Displaying-Messages">Displaying Messages<a class="anchor-link" href="#Displaying-Messages">&#182;</a></h1><ul>
+<li>MSGBox can be used to display a message notification for the user in a windows form application</li>
+<li>Let's add a message to display "hello world" when form1 is loaded</li>
+<li>Double click on Form1 in design view, then inside the form1_load sub, type:<div class="highlight"><pre><span></span><span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hello-World-in-Windows-forms">Hello World in Windows forms<a class="anchor-link" href="#Hello-World-in-Windows-forms">&#182;</a></h1><p>Your code should look like this:</p>
+<div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Class</span> <span class="nc">Form1</span>
+    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">Form1_Load</span><span class="p">(</span><span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">e</span> <span class="ow">As</span> <span class="n">EventArgs</span><span class="p">)</span> <span class="k">Handles</span> <span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+<span class="k">End</span> <span class="k">Class</span>
+</pre></div>
+<h2 id="Now-start-your-program!">Now start your program!<a class="anchor-link" href="#Now-start-your-program!">&#182;</a></h2>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-running-program">The running program<a class="anchor-link" href="#The-running-program">&#182;</a></h1><ul>
+<li>Did you notice what MSGBox did?</li>
+<li>How is hello world different in windows forms compared to console</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-Are-Controls?">What Are Controls?<a class="anchor-link" href="#What-Are-Controls?">&#182;</a></h1><ul>
+<li>they are all the graphical components that you can use to build an application</li>
+<li>Select Toolbox from View Menu while in <strong>design view</strong>
+<img src="img/toolbox.png" alt=""></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Controls">The Controls<a class="anchor-link" href="#The-Controls">&#182;</a></h1><ul>
+<li>You can place these in forms to design the application
+<img src="img/toolbox2.png" alt=""></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Button-Control">The Button Control<a class="anchor-link" href="#The-Button-Control">&#182;</a></h1><ul>
+<li>Let's add a button to the project</li>
+<li>Go to the design view</li>
+<li>Drag a button from the toolbox and place the button anywhere on Form1</li>
+<li>Double click on the button in the design view</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Your-Code-Now">Your Code Now<a class="anchor-link" href="#Your-Code-Now">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Class</span> <span class="nc">Form1</span>
+    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">Form1_Load</span><span class="p">(</span><span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">e</span> <span class="ow">As</span> <span class="n">EventArgs</span><span class="p">)</span> <span class="k">Handles</span> <span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+
+    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">Button1_Click</span><span class="p">(</span><span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">e</span> <span class="ow">As</span> <span class="n">EventArgs</span><span class="p">)</span> <span class="k">Handles</span> <span class="n">Button1</span><span class="p">.</span><span class="n">Click</span>
+
+    <span class="k">End</span> <span class="k">Sub</span>
+<span class="k">End</span> <span class="k">Class</span>
+</pre></div>
+<h3 id="What-Changed?">What Changed?<a class="anchor-link" href="#What-Changed?">&#182;</a></h3>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Button1_click">Button1_click<a class="anchor-link" href="#Button1_click">&#182;</a></h1><ul>
+<li>This is the button1 click event sub</li>
+<li>When do you think this is executed?</li>
+<li>Add a statement to display a msgbox with the message:</li>
+</ul>
+<p><code>The Button Has Been Clicked!</code></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Solution">The Solution<a class="anchor-link" href="#The-Solution">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Class</span> <span class="nc">Form1</span>
+    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">Form1_Load</span><span class="p">(</span><span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">e</span> <span class="ow">As</span> <span class="n">EventArgs</span><span class="p">)</span> <span class="k">Handles</span> <span class="k">MyBase</span><span class="p">.</span><span class="n">Load</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+
+    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">Button1_Click</span><span class="p">(</span><span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">e</span> <span class="ow">As</span> <span class="n">EventArgs</span><span class="p">)</span> <span class="k">Handles</span> <span class="n">Button1</span><span class="p">.</span><span class="n">Click</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;The Button Has Been Clicked!&quot;</span><span class="p">)</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+<span class="k">End</span> <span class="k">Class</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-Perform-Tasks">How to Perform Tasks<a class="anchor-link" href="#How-to-Perform-Tasks">&#182;</a></h1><ul>
-<li>You need to be able to describe the steps of a program in plain human language</li>
-<li>These steps must be detailed and accurate</li>
-<li>The steps are known as an algorithm (خوارزمية)</li>
-<li>Always spend time planning your program and thinking about the steps before writing it</li>
+<h1 id="Moving-Forward">Moving Forward<a class="anchor-link" href="#Moving-Forward">&#182;</a></h1><ul>
+<li>I will not display complete code from the code view</li>
+<li><p>Instead, I will do the following:</p>
+<div class="highlight"><pre><span></span><span class="k">Private</span> <span class="k">Sub</span> <span class="nf">Button1_Click</span><span class="p">(</span><span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">e</span> <span class="ow">As</span> <span class="n">EventArgs</span><span class="p">)</span> <span class="k">Handles</span> <span class="n">Button1</span><span class="p">.</span><span class="n">Click</span>
+      <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;The Button Has Been Clicked!&quot;</span><span class="p">)</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
+</li>
+<li><p>Do you think there is any difference if Button1_Click came before Form1_load? Try moving them</p>
+</li>
 </ul>
 
 </div>
@@ -12100,19 +12497,14 @@ Together they are powerful beyond imagination.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Program-Errors-(Also-Known-As-Bugs)">Program Errors (Also Known As Bugs)<a class="anchor-link" href="#Program-Errors-(Also-Known-As-Bugs)">&#182;</a></h1><ul>
-<li>Sometimes the program functions, but the steps we selected are incorrect<ul>
-<li>This is known as a symmantic error</li>
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
+<li>Is the MSGBox an Input or Output control?</li>
+<li>Is the Button an Input or Output control?<ul>
+<li>When do we use it?</li>
 </ul>
 </li>
-<li>Sometimes we forget to instruct the computer to handle special cases of data or input and it fails to deal with it<ul>
-<li>This is known as a logical error</li>
-</ul>
-</li>
-<li>Sometimes we do not write our statements correctly, the way the computer would understand them<ul>
-<li>This is known as a syntax error </li>
-</ul>
-</li>
+<li>Try adding 2 more buttons</li>
+<li>For each button display a different message</li>
 </ul>
 
 </div>
