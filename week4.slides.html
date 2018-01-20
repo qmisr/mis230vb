@@ -11906,16 +11906,380 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Subroutines and Functions</span>
-<span class="c1"># Understand controls and events here (right side and properties)</span>
-<span class="c1"># Conventions for naming controls</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># conditionals also should include input validation</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></section></section>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Operators">Operators<a class="anchor-link" href="#Operators">&#182;</a></h1><ul>
+<li>Used to construct represent operations on variables and data</li>
+<li>Examples include mathematical and logical</li>
+<li>Typically on the right side of the assignment operator <strong>=</strong></li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Examples-of-Expressions-With-Operators">Examples of Expressions With Operators<a class="anchor-link" href="#Examples-of-Expressions-With-Operators">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">lblOut</span><span class="p">.</span><span class="n">Text</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.15</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">^</span> <span class="mi">2</span>
+<span class="n">isWorking</span> <span class="o">=</span> <span class="n">isOpen</span> <span class="ow">or</span> <span class="n">isReading</span>
+<span class="n">textMessage</span> <span class="o">=</span> <span class="s">&quot;hello &quot;</span> <span class="o">&amp;</span> <span class="n">name</span> <span class="o">&amp;</span> <span class="s">&quot; your birthday is on &quot;</span> <span class="o">&amp;</span> <span class="n">birthDay</span>
+</pre></div>
+<h3 id="Notice-that-an-operator-can-combine-multiple-values-together,-and-usually-on-the-right-of-an-assignment-operator">Notice that an operator can combine multiple values together, and usually on the right of an assignment operator<a class="anchor-link" href="#Notice-that-an-operator-can-combine-multiple-values-together,-and-usually-on-the-right-of-an-assignment-operator">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Expressions">Expressions<a class="anchor-link" href="#Expressions">&#182;</a></h1><ul>
+<li>Can include multiple variables, expressions, data, and sub/functions<ul>
+<li>Each one is called a term, e.g.:<code>x+5+y</code></li>
+</ul>
+</li>
+<li>VB will attempt to convert the type of every term to match the first one<ul>
+<li>Will throw an error if it cannot convert it</li>
+<li>Some programming languages prefer to give an error without conversion</li>
+<li>VB is designed for windows development where lots of conversion to/from strings is done, so convertion is done automatically</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Operators-In-VB-Ordered-by-Precedence">Operators In VB Ordered by Precedence<a class="anchor-link" href="#Operators-In-VB-Ordered-by-Precedence">&#182;</a></h1><table>
+<thead><tr>
+<th style="text-align:center">Operator</th>
+<th style="text-align:right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:right">Exponentiation</td>
+</tr>
+<tr>
+<td style="text-align:center">+,-</td>
+<td style="text-align:right">Unary identity and negation</td>
+</tr>
+<tr>
+<td style="text-align:center">*,/</td>
+<td style="text-align:right">Multiplication and floating-point division</td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:right">Integer division</td>
+</tr>
+<tr>
+<td style="text-align:center">Mod</td>
+<td style="text-align:right">Modulus arithmetic</td>
+</tr>
+<tr>
+<td style="text-align:center">+,-</td>
+<td style="text-align:right">Addition and subtraction, string concatenation</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:right">String concatenation</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;,&lt;,&lt;&gt;,&lt;=,&gt;=,=</td>
+<td style="text-align:right">Comparisons <strong>(result is True or False)</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:right">Assignment <strong>(No result, but changes the variable on the left side)</strong></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Operator-Precedence">Operator Precedence<a class="anchor-link" href="#Operator-Precedence">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">z</span>
+<span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">z</span> <span class="err">‘</span><span class="n">you</span> <span class="n">can</span> <span class="n">modify</span> <span class="n">precedence</span> <span class="k">using</span> <span class="p">(</span> <span class="p">)</span>
+<span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">*</span> <span class="n">z</span> <span class="err">‘</span><span class="n">evaluated</span> <span class="n">from</span> <span class="n">left</span> <span class="k">to</span> <span class="n">right</span>
+<span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h1><p>Create a program that performs the following tasks</p>
+<ul>
+<li>Convert the temprature (supplied by the user) from F to C and from C to F</li>
+<li>Conversion formula is: F = 9/5*C + 32</li>
+<li>Name the project: tempconvert</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
+<li>Use a single textBox and single output</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Another-Exercise">Another Exercise<a class="anchor-link" href="#Another-Exercise">&#182;</a></h1><p>Create a program that perform the following tasks</p>
+<ul>
+<li>Calculate the Body Mass Index</li>
+<li>$BMI = \frac{kg}{m^2}$, where KG is weight in KG, and m is the length in meters</li>
+<li>Based on BMI, tell the user whether he/she is:<ul>
+<li>Underweight: $BMI &lt; 18.5$</li>
+<li>Healthy: $18.5 \leq BMI \leq 25$</li>
+<li>Overweight: $BMI &gt; 25$</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem">Problem<a class="anchor-link" href="#Problem">&#182;</a></h1><ul>
+<li>How can we get the computer to make a decision based on a value?</li>
+<li>From last exercise, the computer should decide based on BMI whether user is underweight, healthy, or overweight</li>
+<li><strong>Solution:</strong> Conditionals<ul>
+<li>Also known as the if statement</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-If-Statement">The If Statement<a class="anchor-link" href="#The-If-Statement">&#182;</a></h1><ul>
+<li>A Conditional, meaning, it contains a condition<ul>
+<li>Condition is based on BMI</li>
+</ul>
+</li>
+<li>Executes a code block <strong>only if the condition is true</strong><ul>
+<li>A code block is a section of the program containing statements</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="If-Syntax">If Syntax<a class="anchor-link" href="#If-Syntax">&#182;</a></h1>
+<pre><code>vb
+If condition then
+    ' expressions here
+    ' can be multiple lines
+    ' can be anything you learned so far
+    ' even another if statement!
+End If</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Condition-Can-Be">Condition Can Be<a class="anchor-link" href="#Condition-Can-Be">&#182;</a></h1><ul>
+<li>Variables</li>
+<li>Expressions with comparison operators (logical or mathimatical)</li>
+<li>Function that returns a value</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Condition-is-False-if">The Condition is False if<a class="anchor-link" href="#The-Condition-is-False-if">&#182;</a></h1><ul>
+<li>Expression, variable or Function results in:<ul>
+<li>False value</li>
+<li>0 if Numeric value</li>
+<li>Empty string<ul>
+<li>Then it is considered <strong>False condition</strong></li>
+<li>Otherwise it is a True <strong>condition</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="BMI-Solution">BMI Solution<a class="anchor-link" href="#BMI-Solution">&#182;</a></h1>
+<pre><code>vb
+If lblBMI.text &lt; 18.5 then
+    MsgBox("You are underweight!")
+End If</code></pre>
+<h3 id="Can-you-write-the-other-conditions?">Can you write the other conditions?<a class="anchor-link" href="#Can-you-write-the-other-conditions?">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Overweight-Condition">Overweight Condition<a class="anchor-link" href="#Overweight-Condition">&#182;</a></h1>
+<pre><code>vb
+If lblBMI.text &gt; 25 then
+    MsgBox("You are overweight!")
+End If</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Healthy-Condition">Healthy Condition<a class="anchor-link" href="#Healthy-Condition">&#182;</a></h1><ul>
+<li>This one is a challenge because it contains 2 condition:<ul>
+<li>bmi &gt;= 18.5 and</li>
+<li>bmi &lt;= 25</li>
+</ul>
+</li>
+<li>Conditions are logical expressions</li>
+<li>We can combine logical expressions using logic operators <strong>And</strong>, <strong>Or</strong></li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="And-Logical-Operator">And Logical Operator<a class="anchor-link" href="#And-Logical-Operator">&#182;</a></h1><ul>
+<li>Both terms must be true for the result to be true<ul>
+<li><strong>True And True = True</strong></li>
+<li>True And False = False</li>
+<li>False And True = False</li>
+<li>False And False = False</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Or-Logical-Operator">Or Logical Operator<a class="anchor-link" href="#Or-Logical-Operator">&#182;</a></h1><ul>
+<li>If any term is true, then the result is true<ul>
+<li>True And True = True</li>
+<li>True And False = True</li>
+<li>False And True = True</li>
+<li><strong>False And False = False</strong></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Healthy-Condition-Solution">Healthy Condition Solution<a class="anchor-link" href="#Healthy-Condition-Solution">&#182;</a></h1><p>How do we combine the conditions?</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>vb
+If lblBMI.text &gt;= 18.5 And lblBMI.text &lt;= 25 Then
+    MsgBox("You are healthy!")
+End If</code></pre>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h1><ul>
+<li>Create a program that asks the user for height and width of a rectangular shape.</li>
+<li>If the height is equal to the width, then the program should notify the user that this is a square</li>
+<li>If not, then the program should tell the user that the shape is a rectangle</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
+<li>Improve the program to display the area of the shape using the appropriate formula</li>
+<li>Square area = $Width^2$</li>
+<li>Rectangular area = $Width * Height$</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section>
 </div>
 </div>
 

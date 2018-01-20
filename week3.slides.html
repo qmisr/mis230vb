@@ -11905,48 +11905,620 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variables-and-Data-Types">Variables and Data Types<a class="anchor-link" href="#Variables-and-Data-Types">&#182;</a></h1><ul>
+<li>We have seen that variables are placeholders for data</li>
+<li>To use them in VB you must declare them</li>
+<li>Decleration is telling the computer to prepare a space in memory to store data and give it a name</li>
+<li>Decleration also tells the computer what the type of data well be</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Example-for-Decleration">Example for Decleration<a class="anchor-link" href="#Example-for-Decleration">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">myStr</span> <span class="ow">as</span> <span class="kt">String</span>
+<span class="k">Dim</span> <span class="n">radius</span> <span class="ow">as</span> <span class="kt">Double</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-Are-the-Available-Data-Types?">What Are the Available Data Types?<a class="anchor-link" href="#What-Are-the-Available-Data-Types?">&#182;</a></h1><table>
+<thead><tr>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Short</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Boolean</strong></td>
+<td style="text-align:center">bln</td>
+<td style="text-align:left">True, False values</td>
+</tr>
+<tr>
+<td style="text-align:center">Short</td>
+<td style="text-align:center">srt</td>
+<td style="text-align:left">-32,768 to 32,767</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Integer</strong></td>
+<td style="text-align:center">int</td>
+<td style="text-align:left">-2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+<td style="text-align:center">Long</td>
+<td style="text-align:center">lng</td>
+<td style="text-align:left">-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Double</strong></td>
+<td style="text-align:center">dbl</td>
+<td style="text-align:left">Double precision floating point e.g. 10.123423</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>String</strong></td>
+<td style="text-align:center">str</td>
+<td style="text-align:left">Text data</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="These-are-the-main-data-types-that-we-will-need">These are the main data types that we will need<a class="anchor-link" href="#These-are-the-main-data-types-that-we-will-need">&#182;</a></h1><h2 id="But-there-are-more-that-we-will-learn-along-the-way">But there are more that we will learn along the way<a class="anchor-link" href="#But-there-are-more-that-we-will-learn-along-the-way">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Rules-For-Selecting-Variable-Name">Rules For Selecting Variable Name<a class="anchor-link" href="#Rules-For-Selecting-Variable-Name">&#182;</a></h1><ul>
 <li>Must not start with a number</li>
 <li>Can include only letters and numbers</li>
 <li>Must not include spaces</li>
 <li>Must not match the name of another VB command or variable</li>
-<li><strong>Recommendation:</strong> Choose a human readable name that reflects what data is included in the variable</li>
+<li><strong>Recommendation:</strong> Follow VB naming conventions to make your programs more readable</li>
 </ul>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h1><p>For the following declerations, determine the variable name and data type for the correct declarations</p>
-<div class="highlight"><pre><span></span><span class="k">dim</span> <span class="n">x</span> <span class="ow">as</span> <span class="kt">String</span>
+<h1 id="Variable-Naming-Conventions-in-VB">Variable Naming Conventions in VB<a class="anchor-link" href="#Variable-Naming-Conventions-in-VB">&#182;</a></h1><ul>
+<li>Name consists of two parts:<ol>
+<li>Three letter in lower case to reflect the data type or control<ul>
+<li>See the short column from the data type slides</li>
+</ul>
+</li>
+<li>Capitalized or Camel Case word to tell us what the data is</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Examples-Of-Variable-Names-that-Follow-Convention">Examples Of Variable Names that Follow Convention<a class="anchor-link" href="#Examples-Of-Variable-Names-that-Follow-Convention">&#182;</a></h1><ul>
+<li>strName</li>
+<li>dblTaxRate</li>
+<li>intNumberOfStudents</li>
+</ul>
+<h3 id="Can-you-tell-what-they-contain?-and-what-the-data-type-is?">Can you tell what they contain? and what the data type is?<a class="anchor-link" href="#Can-you-tell-what-they-contain?-and-what-the-data-type-is?">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Example-of-Variable-Names-NOT-Following-Convention">Example of Variable Names NOT Following Convention<a class="anchor-link" href="#Example-of-Variable-Names-NOT-Following-Convention">&#182;</a></h1><ul>
+<li>x</li>
+<li>myVar</li>
+<li>nameStr</li>
+<li>int_number_of_students</li>
+</ul>
+<h3 id="What-is-the-problem-with-each?">What is the problem with each?<a class="anchor-link" href="#What-is-the-problem-with-each?">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exercise:-Find-Name,-Data-Type,-and-Errors">Exercise: Find Name, Data Type, and Errors<a class="anchor-link" href="#Exercise:-Find-Name,-Data-Type,-and-Errors">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">dim</span> <span class="n">x</span> <span class="ow">as</span> <span class="kt">String</span>
 <span class="k">Dim</span> <span class="n">X</span> <span class="ow">as</span> <span class="kt">Integer</span>
 <span class="k">Dim</span> <span class="kt">string</span> <span class="ow">as</span> <span class="kt">string</span>
 <span class="n">y</span> <span class="ow">as</span> <span class="kt">string</span>
 <span class="k">Dim</span> <span class="n">z</span> <span class="ow">as</span> <span class="kt">Integer</span>
 <span class="k">Dim</span> <span class="n">my</span> <span class="n">name</span> <span class="ow">as</span> <span class="kt">String</span>
 <span class="k">Dim</span> <span class="n">myName</span> <span class="ow">as</span> <span class="kt">String</span>
+<span class="k">Dim</span> <span class="mi">1</span><span class="n">guy</span> <span class="ow">as</span> <span class="kt">String</span>
 </pre></div>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variables and Data Types</span>
-<span class="c1"># dont forget conventions</span>
-<span class="c1"># Input box and start writing expressions (including constructing strings and special characters)</span>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Initialization">Variable Initialization<a class="anchor-link" href="#Variable-Initialization">&#182;</a></h1><ul>
+<li>Is to set a value for variable during/after decleration to ensure that it is not in an unknown state</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">intWeekDays</span> <span class="ow">as</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="c">&#39;Alternatively</span>
+
+<span class="k">Dim</span> <span class="n">intWeekDays</span> <span class="ow">as</span> <span class="kt">Integer</span>
+<span class="n">intWeekDays</span> <span class="o">=</span> <span class="mi">7</span>
 </pre></div>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Remember,-it-is-always-good-practice-to-initialize-variables">Remember, it is always good practice to initialize variables<a class="anchor-link" href="#Remember,-it-is-always-good-practice-to-initialize-variables">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Assignment">Variable Assignment<a class="anchor-link" href="#Variable-Assignment">&#182;</a></h1><ul>
+<li>Can you remember what it is?</li>
+</ul>
 
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Assignment">Variable Assignment<a class="anchor-link" href="#Variable-Assignment">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="n">expresions</span> <span class="ow">or</span> <span class="n">value</span> <span class="ow">or</span> <span class="n">variable</span>
+</pre></div>
+<h3 id="Assign-the-result-or-value-of-whatever-is-on-the-right,-to-the-variable-on-the-left">Assign the result or value of whatever is on the right, to the variable on the left<a class="anchor-link" href="#Assign-the-result-or-value-of-whatever-is-on-the-right,-to-the-variable-on-the-left">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Assignment">Variable Assignment<a class="anchor-link" href="#Variable-Assignment">&#182;</a></h1><p>What do you expect will happen?</p>
+<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">x</span> <span class="ow">as</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="s">&quot;Hello&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Assignment">Variable Assignment<a class="anchor-link" href="#Variable-Assignment">&#182;</a></h1><p>What do you expect will happen?</p>
+<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">x</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variable-Assignment">Variable Assignment<a class="anchor-link" href="#Variable-Assignment">&#182;</a></h1><p>What do you expect will happen?</p>
+<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">x</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">Dim</span> <span class="n">y</span> <span class="ow">as</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">MsgBox</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+<span class="n">MsgBox</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h1><ul>
+<li>When you refer to a variable name in an expression or operation, you are telling the computer to use the data in the variables</li>
+<li>From last slides, x+y actually means 5+5<ul>
+<li>Of course it depends on what value is inside x or y</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variables-Challenge">Variables Challenge<a class="anchor-link" href="#Variables-Challenge">&#182;</a></h1><ul>
+<li>Create a variable x and assign the value 10 to it</li>
+<li>output the value of x</li>
+<li>output the letter x</li>
+<li>What is the difference?</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">MsgBox</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c">&#39; displays content of x</span>
+<span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span> <span class="c">&#39; displays the letter x</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Control-Properties">Control Properties<a class="anchor-link" href="#Control-Properties">&#182;</a></h1><ul>
+<li>Remember controls? What about their properties?</li>
+<li>Open the HelloWorld windows form project, and add add a Label</li>
+<li>Take note of the text and name labels, what are thier values?<ul>
+<li>What are they used for?</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Controls-Properties">Controls Properties<a class="anchor-link" href="#Controls-Properties">&#182;</a></h1><ul>
+<li>To access a property of a control, you use dont notation:<div class="highlight"><pre><span></span><span class="n">MsgBox</span><span class="p">(</span><span class="n">label</span><span class="p">.</span><span class="n">Text</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+<p>Can you explain what is happening? What is the variable name? What is dot notation? What is the datatype?</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Assigning-To-Control-Properties">Assigning To Control Properties<a class="anchor-link" href="#Assigning-To-Control-Properties">&#182;</a></h1><ul>
+<li>Can you remember what assignment was?</li>
+<li>Use it to change the Text property of the label</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">label</span><span class="p">.</span><span class="n">Text</span> <span class="o">=</span> <span class="s">&quot;New Value&quot;</span>
+</pre></div>
+<h3 id="Notice-the-value-is-a-String">Notice the value is a String<a class="anchor-link" href="#Notice-the-value-is-a-String">&#182;</a></h3>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Things-To-Remember-About-Control-Properties">Things To Remember About Control Properties<a class="anchor-link" href="#Things-To-Remember-About-Control-Properties">&#182;</a></h1><ul>
+<li>Look at the properties windows to know them</li>
+<li>Access the values and use them like variables using dot notation using: <code>controlName.propertyName</code><ul>
+<li>VB, as part of windows forms, creates the variables for these controls, you do not have to do it</li>
+<li>Their variable names will match the name property of the control</li>
+</ul>
+</li>
+<li>Change the values using dot notation and assignment: <code>controlName.propertyName = newValue</code></li>
+<li>Remember to always change the name of the control to follow naming convention</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Control-Naming-Convention">Control Naming Convention<a class="anchor-link" href="#Control-Naming-Convention">&#182;</a></h1><table>
+<thead><tr>
+<th style="text-align:center">Control</th>
+<th style="text-align:center">Short Label</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Label</td>
+<td style="text-align:center">lbl</td>
+<td style="text-align:left">lblOutput, lblScore</td>
+</tr>
+<tr>
+<td style="text-align:center">TextBox</td>
+<td style="text-align:center">txt</td>
+<td style="text-align:left">txtName, txtAge</td>
+</tr>
+<tr>
+<td style="text-align:center">Button</td>
+<td style="text-align:center">btn</td>
+<td style="text-align:left">btnSubmit, btnAdd <strong>(Notice buttons are usually operations)</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">Radio Button</td>
+<td style="text-align:center">rdo</td>
+<td style="text-align:left">rdoGender, rdoMajor</td>
+</tr>
+<tr>
+<td style="text-align:center">Check Box</td>
+<td style="text-align:center">chk</td>
+<td style="text-align:left">chkIsGraduate, chkIsStudent</td>
+</tr>
+<tr>
+<td style="text-align:center">List</td>
+<td style="text-align:center">lst</td>
+<td style="text-align:left">lstItems, lstStudents</td>
+</tr>
+<tr>
+<td style="text-align:center">ComboBox</td>
+<td style="text-align:center">cbx</td>
+<td style="text-align:left">cbxMajors, cbaStudentIds</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Label-Control">Label Control<a class="anchor-link" href="#Label-Control">&#182;</a></h1><ul>
+<li>Used to output text within a form</li>
+<li>Used to put labels next to items to describe them</li>
+<li>Always change the name to follow naming convention<ul>
+<li>e.g.: lblName, lblOutput, lblStudentGrade</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="TextBox-Control">TextBox Control<a class="anchor-link" href="#TextBox-Control">&#182;</a></h1><ul>
+<li>Use it exactly like a label<ul>
+<li>Use the properties name, and label</li>
+</ul>
+</li>
+<li>Has the added benefit of accepting input from the user</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="User-Input-from-TextBox">User Input from TextBox<a class="anchor-link" href="#User-Input-from-TextBox">&#182;</a></h1><ul>
+<li>If you double click the TextBox you will override TextChanged<ul>
+<li>This sub gets called everytime a user types a letter</li>
+</ul>
+</li>
+<li>We usually want to perform an action after the user is done with typing. This can be achieved in two methods:</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Method-1:-TextBox-Input">Method 1: TextBox Input<a class="anchor-link" href="#Method-1:-TextBox-Input">&#182;</a></h1><ul>
+<li>Add a button which the user should click to perform the action after he/she is done with text input</li>
+<li>This is the simplist method and most intuitive</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Method-2:-TextBox-Input">Method 2: TextBox Input<a class="anchor-link" href="#Method-2:-TextBox-Input">&#182;</a></h1><ul>
+<li>Click once on the TextBox then look for KeyDown even in the properties window</li>
+<li>This event is run every time a button is pressed</li>
+<li>Simply check if the pressed button is <strong>Enter</strong></li>
+<li>We will get back to this method in the future</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Simple-Challenge">Simple Challenge<a class="anchor-link" href="#Simple-Challenge">&#182;</a></h1><ul>
+<li>Create <strong>ImprovedHelloWorld</strong> windows form project</li>
+<li>Project must get the name of the user then gives a greeting with the user name.<ul>
+<li>e.g.: Hello mohammad!</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Constructing-Strings">Constructing Strings<a class="anchor-link" href="#Constructing-Strings">&#182;</a></h1><ul>
+<li>To complete the challenge you must combine 3 strings together:<ol>
+<li>The greeting message before the name: <code>"Hello "</code></li>
+<li>The name from the textbox</li>
+<li>The final part of the greeting message after the name: <code>"!"</code></li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="c">&#39; Assuming that you have an output label called lblOut</span>
+<span class="n">lblOut</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="o">=</span> <span class="s">&quot;Hello &quot;</span> <span class="o">&amp;</span> <span class="n">txtName</span><span class="p">.</span><span class="n">Text</span> <span class="o">&amp;</span> <span class="s">&quot;!&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-the-&amp;-part?">What is the &amp; part?<a class="anchor-link" href="#What-is-the-&amp;-part?">&#182;</a></h1><ul>
+<li>This is known as an operator</li>
+<li>They are used to instruct the computer to perform operations on data and variables</li>
+<li>The operations can be mathematical, string, logical ..etc</li>
+<li>We will discuss operators in detail next week</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Another-Challenge">Another Challenge<a class="anchor-link" href="#Another-Challenge">&#182;</a></h1><ul>
+<li>improve the last project to ask the user for his/her name and major</li>
+<li>Display a greeting message for the user in the following format:
+<pre><code>Hello Mohammad!
+Your major is MIS</code></pre>
+</li>
+<li>Be sure to display the text over two lines</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge-Hint">Challenge Hint<a class="anchor-link" href="#Challenge-Hint">&#182;</a></h1><ul>
+<li>VB and any other language has special constants to be used to display character that cannot be typed in the keyboard or put in a string</li>
+<li>These special characters are:</li>
+</ul>
+<table>
+<thead><tr>
+<th style="text-align:center">Character</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">vbNewLine</td>
+<td style="text-align:left">New line</td>
+</tr>
+<tr>
+<td style="text-align:center">vbLf</td>
+<td style="text-align:left">Line feed</td>
+</tr>
+<tr>
+<td style="text-align:center">vbCr</td>
+<td style="text-align:left">Carriage return</td>
+</tr>
+<tr>
+<td style="text-align:center">vbCrLf</td>
+<td style="text-align:left">Carriage return then line feed</td>
+</tr>
+<tr>
+<td style="text-align:center">vbTab</td>
+<td style="text-align:left">Tab, around 4 spaces</td>
+</tr>
+<tr>
+<td style="text-align:center">vbBack</td>
+<td style="text-align:left">The back character, usually clears one charachter</td>
+</tr>
+<tr>
+<td style="text-align:center">vbVerticalTab</td>
+<td style="text-align:left">vertical tab</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Things-to-think-about">Things to think about<a class="anchor-link" href="#Things-to-think-about">&#182;</a></h1><ul>
+<li>How do we represent a space character?</li>
+<li>With " used to represent the start and end of a string, how do we print it?</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quick-Challenge">Quick Challenge<a class="anchor-link" href="#Quick-Challenge">&#182;</a></h1><p>Solve the last challenge as a console project</p>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
