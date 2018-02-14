@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>week6 slides</title>
+<title>week8 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,304 +11905,119 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Functions,-Subroutines,-and-Methods">Functions, Subroutines, and Methods<a class="anchor-link" href="#Functions,-Subroutines,-and-Methods">&#182;</a></h1><ul>
-<li>Way to group statements together and run them by calling the name of the function or subroutine</li>
-<li>In VB, functions return values, subroutines do not<ul>
-<li>Functions can be used in mathematical expressions as they are replaced by the value they return</li>
+<h1 id="String-Methods">String Methods<a class="anchor-link" href="#String-Methods">&#182;</a></h1><ul>
+<li>Strings are the most used data types in most applications</li>
+<li>User input is treated as strings then converted to other data types to process</li>
+<li>Strings will have special functions to enable quick processing of strings</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Discovering-String-Functions">Discovering String Functions<a class="anchor-link" href="#Discovering-String-Functions">&#182;</a></h1><ul>
+<li>You can to read the VB documentation</li>
+<li>Google is your friend<ul>
+<li>Search for <strong>visual basic string methods</strong></li>
 </ul>
 </li>
-<li>Method is a name for subroutines and functions in OOP</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-a-Subroutine">Creating a Subroutine<a class="anchor-link" href="#Creating-a-Subroutine">&#182;</a></h1>
-<pre><code>vb
-Sub SubName() 
-    MSGBox("You called SubName")
-End Sub</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-a-Function">Creating a Function<a class="anchor-link" href="#Creating-a-Function">&#182;</a></h1>
-<pre><code>vb
-Sub FuncName() As Integer 
-    MSGBox("You called FuncName")
-    Return 5  'Can any value, variable, or expresstion that 
-              'is an integer
-End Sub</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Using-Functions/Subroutines">Using Functions/Subroutines<a class="anchor-link" href="#Using-Functions/Subroutines">&#182;</a></h1><ul>
-<li>Just call the name of the Func/Sub with () to run it
-<pre><code>vb
-SubName() 'will execute SubName
-MSGBox("The result from FuncName is "&amp; FuncName()) 'doesnt work
-                                                 'with sub</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Parameters/Arguments">Parameters/Arguments<a class="anchor-link" href="#Parameters/Arguments">&#182;</a></h1><ul>
-<li>Way to pass values/variables to the function/sub<ul>
-<li>You include them inside the parantheses ()</li>
-</ul>
-</li>
-<li>They are just variables</li>
-<li>Allows us to perform the actions in the Func/Sub on different values, variables, controls ..etc</li>
-<li>Way that different parts of the program talk to one another and pass data<ul>
-<li>e.g: windows sending information to your program</li>
+<li>Read also microsoft reference documents for VB<ul>
+<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#string-operations-by-category">here</a>, and <a href="https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/keywords/string-manipulation-summary">here</a></li>
+<li>The documentation is richer, you have to search for what you need.</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Parameter-Example">Parameter Example<a class="anchor-link" href="#Parameter-Example">&#182;</a></h1>
-<pre><code>vb
-Function Add(x As Integer, y As Integer) As Integer
-    return x+y
-End If
-
-' to use it
-MsgBox("result is: " &amp; Add(5,6))</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example:-Validation-of-TextBoxes">Example: Validation of TextBoxes<a class="anchor-link" href="#Example:-Validation-of-TextBoxes">&#182;</a></h1>
-<pre><code>vb
-Sub ValidateTextbox1()
-    if TextBox1.text = "" Then
-        MsgBox("Textbox is Empty")
-    End If
-End Sub</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-with-ValidateTextbox1">Problem with ValidateTextbox1<a class="anchor-link" href="#Problem-with-ValidateTextbox1">&#182;</a></h1>
-<pre><code>vb
-ValidateTextbox1()
-' The next statement should run only if input is valid
-MsgBox("The Valid Input is:" &amp; TextBox1.Text)
-' Will it run?</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-with-ValidateTextbox1">Problem with ValidateTextbox1<a class="anchor-link" href="#Problem-with-ValidateTextbox1">&#182;</a></h1><ul>
-<li>No way to prevent display of MsgBox if input is invalid</li>
-<li>Works only with Textbox1</li>
+<h1 id="String-Methods-in-VB">String Methods in VB<a class="anchor-link" href="#String-Methods-in-VB">&#182;</a></h1><ul>
+<li>Finding characher/string in a string</li>
+<li>Comparing strings</li>
+<li>Modifying strings</li>
+<li>...more</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Use-Function-To-Fix-Validation">Use Function To Fix Validation<a class="anchor-link" href="#Use-Function-To-Fix-Validation">&#182;</a></h1>
+<h1 id="Searching-in-strings">Searching in strings<a class="anchor-link" href="#Searching-in-strings">&#182;</a></h1><ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.indexof?view=netframework-4.7.1#System_String_IndexOf_System_String_">String.IndexOf</a> (read documentation first)
 <pre><code>vb
-Function ValidateTextbox2() As Boolean
-    if TextBox1.text = "" Then
-        MsgBox("Textbox is Empty")
-        Return False ' If there is a problem return False
-    End If
-    Return True ' Return True if everything is OK!
-End Sub</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Use-Function-To-Fix-Validation">Use Function To Fix Validation<a class="anchor-link" href="#Use-Function-To-Fix-Validation">&#182;</a></h1>
-<pre><code>vb
-If ValidateTextbox2() Then
-    ' Now it will only run if ValidateTextbox2() return True
-    MsgBox("The Valid Input is:" &amp; TextBox1.Text)
-End If</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-with-ValidateTextbox2">Problem with ValidateTextbox2<a class="anchor-link" href="#Problem-with-ValidateTextbox2">&#182;</a></h1><ul>
-<li>Fixed one problem</li>
-<li>Still, works only with TextBox1</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Fixing-ValidateTextbox2-With-Parameters">Fixing ValidateTextbox2 With Parameters<a class="anchor-link" href="#Fixing-ValidateTextbox2-With-Parameters">&#182;</a></h1>
-<pre><code>vb
-Function ValidateTextbox3(ByRef txtBox As TextBox) As Boolean
-    if txtBox.text = "" Then
-        MsgBox("Textbox is Empty")
-        Return False ' If there is a problem return False
-    End If
-    Return True ' Return True if everything is OK!
-End Sub</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Using-Function-with-Different-TextBoxes">Using Function with Different TextBoxes<a class="anchor-link" href="#Using-Function-with-Different-TextBoxes">&#182;</a></h1>
-<pre><code>vb
-If ValidateTextbox3(TextBox1) Then
-    MsgBox("The Valid Input is:" &amp; TextBox1.Text)
-End If
-
-If ValidateTextbox3(TextBox2) Then
-    MsgBox("The Valid Input is:" &amp; TextBox2.Text)
-End If</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Some-Notes">Some Notes<a class="anchor-link" href="#Some-Notes">&#182;</a></h1><ul>
-<li>Use <strong>ByRef</strong> when you want to pass controls as parameters<ul>
-<li>No need to use it with other datatypes</li>
-</ul>
+Dim str As String = "animal"
+Dim index As Integer = str.IndexOf("n")
+Dim index2 As Integer = str.IndexOf("mal")
+Dim index3 As Integer = str.IndexOf("mak")
+' what will index, index2, index3 be?</code></pre>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variable-scope">Variable scope<a class="anchor-link" href="#Variable-scope">&#182;</a></h1><ul>
-<li>The parts of a program in which a variable you defined can be used</li>
-<li>Can be local or global</li>
+<h1 id="Other-Search-Methods">Other Search Methods<a class="anchor-link" href="#Other-Search-Methods">&#182;</a></h1><ul>
+<li>Contains</li>
+<li>lastIndexOf</li>
+<li>StartsWith</li>
+<li>endsWith</li>
 </ul>
-
+<h3 id="Try-searching-google-for-each-one-to-find-out-what-it-does">Try searching google for each one to find out what it does<a class="anchor-link" href="#Try-searching-google-for-each-one-to-find-out-what-it-does">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Local-Scope">Local Scope<a class="anchor-link" href="#Local-Scope">&#182;</a></h1><ul>
-<li>Variable exists and can be used in specific Func/Sub</li>
-<li>Variables defined inside a Func/Sub have local scope</li>
-<li>Parameters have local scope<ul>
-<li>What does this mean?</li>
-</ul>
-</li>
-<li>What if we need a value inside a Func/Sub to reach another Func/Sub?</li>
+<h1 id="Comparing-String">Comparing String<a class="anchor-link" href="#Comparing-String">&#182;</a></h1><ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.compare?view=netframework-4.7.1#System_String_Compare_System_String_System_String_">String.Compare(str1, str2)</a></li>
+<li>Return 0 if str1 and str2 are equal</li>
+<li>returns &gt; 0 if str1 precedes str2</li>
+<li>Returns &lt; 0 if str2 follows str2 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Global-Scope">Global Scope<a class="anchor-link" href="#Global-Scope">&#182;</a></h1><ul>
-<li>Variables exists and can be used in all Func/Sub in the file</li>
-<li>Variable defined inside Class/Module have global scope<ul>
-<li>The variable is defined outside any func/sub</li>
-</ul>
-</li>
-<li>Controls you create with the designer have global scope, why?</li>
+<h1 id="Modifying-Strings">Modifying Strings<a class="anchor-link" href="#Modifying-Strings">&#182;</a></h1><ul>
+<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#modifying-a-string">Modifying Strings documentation</a></li>
+<li>insert, remove, replace</li>
+<li>toLower, toUpper</li>
+<li>trim</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
-<li>Create an application that implements the following requirements:<ul>
-<li>User can calculate areas of: Square, Rectangle, Circle</li>
-<li>Application will validate input of user and check it for:<ul>
-<li>missing values, numeric values, and correct values</li>
-</ul>
-</li>
-<li>Validation must be performed using a single function</li>
-<li>Area calculations must be done using functions</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
-<li>Create currency conversion calculator</li>
-<li>Gets amount from user</li>
-<li>Converts amount to USD, KWD, SAR</li>
-<li>Use functions to validate input, and calculate converted amount</li>
+<li>Create an application with the following features</li>
+<li>Takes text input from user</li>
+<li>User can convert all text to lower case or upper case</li>
+<li>User can search for a letter or word in the text</li>
+<li>User can replace words/letters with other words/letters</li>
 </ul>
 
 </div>

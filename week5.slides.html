@@ -11901,23 +11901,289 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Conditionals if else if else</span>
-<span class="c1"># perform input validation here</span>
-<span class="c1"># Radio buttons and check boxes</span>
-<span class="c1"># Subroutines and Functions to repeat actions</span>
-<span class="c1"># remember variable scope with functions and parameters</span>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="If-Statements">If Statements<a class="anchor-link" href="#If-Statements">&#182;</a></h1><ul>
+<li>Must contain<ul>
+<li>Condition</li>
+<li>Code block</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h1>
+<pre><code>vb
+' Where is condition? code block?
+' What is the execution flow?
+If x = "Mohammed" Then
+    MSGBox("Hello Mohammad")
+End If
+
+If x = "Ali" Then
+    MSGBox("Hello Ali")
+End If</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="If-x-=-&quot;Mohammad&quot;,-Do-we-need-to-check-if-x-=-&quot;Ali&quot;?">If x = "Mohammad", Do we need to check if x = "Ali"?<a class="anchor-link" href="#If-x-=-&quot;Mohammad&quot;,-Do-we-need-to-check-if-x-=-&quot;Ali&quot;?">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="No">No<a class="anchor-link" href="#No">&#182;</a></h1><h3 id="Use-Else-If-statement-for-this">Use Else If statement for this<a class="anchor-link" href="#Use-Else-If-statement-for-this">&#182;</a></h3>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Relating-If-Statements-to-Each-Other">Relating If Statements to Each Other<a class="anchor-link" href="#Relating-If-Statements-to-Each-Other">&#182;</a></h1><ul>
+<li>We use the <strong>Else If</strong> statement:
+<pre><code>vb
+If x = "Mohammed" Then
+  MSGBox("Hello Mohammad")
+Else If x = "Ali" Then
+  MSGBox("Hello Ali")
+End If</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="We-Can-Even-Add-More">We Can Even Add More<a class="anchor-link" href="#We-Can-Even-Add-More">&#182;</a></h1>
+<pre><code>vb
+If x = "Mohammed" Then
+    MSGBox("Hello Mohammad")
+Else If x = "Ali" Then
+    MSGBox("Hello Ali")
+Else If x = "Sara" Then
+    MSGBox("Hello Sara")
+Else If x = "Nasser" Then
+    MSGBox("Hello Nasser")
+End If</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Else-If-Statements">Else If Statements<a class="anchor-link" href="#Else-If-Statements">&#182;</a></h1><ul>
+<li>Must be used <strong>WITH</strong> if statements</li>
+<li>Must have a condition</li>
+<li>The code for the first tru condition will be executed, all others after it will be ignored<ul>
+<li>A condition will never be executed if any condition above it is True</li>
+</ul>
+</li>
+<li>Can have as many else if statements follow if as we like</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-if-you-want-to-perform-one-task-if-a-condition-is-true,-and-another-if-it-is-false">What if you want to perform one task if a condition is true, and another if it is false<a class="anchor-link" href="#What-if-you-want-to-perform-one-task-if-a-condition-is-true,-and-another-if-it-is-false">&#182;</a></h1><h3 id="Use-Else-statement">Use Else statement<a class="anchor-link" href="#Use-Else-statement">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>vb
+If x = "Mohammed" Then
+    MSGBox("Hello Mohammad")
+Else
+    MSGBox("Go Away!")
+End If</code></pre>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Can-be-combined-with-Else-If-also">Can be combined with Else If also<a class="anchor-link" href="#Can-be-combined-with-Else-If-also">&#182;</a></h1>
+<pre><code>vb
+If x = "Mohammed" Then
+    MSGBox("Hello Mohammad")
+Else If x = "Ali" Then
+    MSGBox("Hello Ali")
+Else
+    MSGBox("Go Away!")
+End If</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Else-Statement">Else Statement<a class="anchor-link" href="#Else-Statement">&#182;</a></h1><ul>
+<li>Must be used with If, must come after it</li>
+<li>Can be used with Else If, must come after it</li>
+<li>Else code block executed only if all condition before it are False</li>
+<li>Doesn't have a condition<ul>
+<li>Because it means <strong>If no condition is true</strong></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Uses-For-If-Statements">Uses For If Statements<a class="anchor-link" href="#Uses-For-If-Statements">&#182;</a></h1><ul>
+<li>Decision making</li>
+<li>Performing different tasks based on different data or special cases</li>
+<li>Input validation<ul>
+<li>Checking if the data entered into the application is correct</li>
+</ul>
+</li>
+<li>More ...</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Input-Validation">Input Validation<a class="anchor-link" href="#Input-Validation">&#182;</a></h1><ul>
+<li>Text input controls allow you to enter strings</li>
+<li>Can you enter a name when the application expects a number?<ul>
+<li>What happens? What is this called?</li>
+</ul>
+</li>
+<li>With input validation, you:<ul>
+<li>Check if the data is what the application expects</li>
+<li>Notify the user of the data entry mistake</li>
+<li>Give the user the opportunity to fix the problem</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
+<li>Improve the BMI challenge exercise by adding input validation to check for and prevent the following conditions:<ul>
+<li>Empty values</li>
+<li>Text values</li>
+<li>Negative values</li>
+<li>Zero values</li>
+</ul>
+</li>
+<li>Show an appropriate message for each condition</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Radio-Buttons-and-Check-Boxes">Radio Buttons and Check Boxes<a class="anchor-link" href="#Radio-Buttons-and-Check-Boxes">&#182;</a></h1><ul>
+<li>Used to give user ability to make choices</li>
+<li>Radio button limits choice to single option from many</li>
+<li>Check box can be used for:<ul>
+<li>Single option between 2</li>
+<li>Multiple options from many</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
+<li>Create currency conversion calculator</li>
+<li>Gets amount from user</li>
+<li>Converts amount to USD, KWD, SAR</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Another-Challenge">Another Challenge<a class="anchor-link" href="#Another-Challenge">&#182;</a></h1><ul>
+<li>Create a pizza creator/calculator application</li>
+<li>User selects the pizza size: Small (0.5 KWD), Medium (1.0 KWD), Large (1.5 KWD)</li>
+<li>User then selects toppings for 0.25 kwd each: Cheese, tomato, olives, pepperoni, mushrooms</li>
+<li>User selects quantity</li>
+<li>Total cost is displayed</li>
+<li>Do we need input validation?</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Checking-for-input-in-a-TextBox">Checking for input in a TextBox<a class="anchor-link" href="#Checking-for-input-in-a-TextBox">&#182;</a></h1><ul>
+<li>Define KeyUp event</li>
+<li>Use e.keycode to check the pressed key</li>
+<li>VB makes available a list of keys under Keys.<div class="highlight"><pre><span></span><span class="k">Private</span> <span class="k">Sub</span> <span class="nf">textBox1_KeyUp</span><span class="p">(</span><span class="k">ByVal</span> <span class="n">sender</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="k">ByVal</span> <span class="n">e</span> <span class="ow">As</span><span class="c">&#39;..</span>
+  <span class="k">If</span> <span class="n">e</span><span class="p">.</span><span class="n">KeyCode</span> <span class="o">=</span> <span class="n">Keys</span><span class="p">.</span><span class="n">Enter</span> <span class="k">Then</span>
+      <span class="n">MSGBox</span><span class="p">(</span><span class="s">&quot;Enter Key pressed!&quot;</span><span class="p">)</span>
+      <span class="c">&#39;</span>
+  <span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </pre></div>
+</li>
+</ul>
 
 </div>
 </div>
-</div>
-
-</div>
+</div></section></section>
 </div>
 </div>
 
