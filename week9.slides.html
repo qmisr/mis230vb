@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>week4 slides</title>
+<title>week9 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11905,155 +11905,119 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operators">Operators<a class="anchor-link" href="#Operators">&#182;</a></h1><ul>
-<li>Used to construct represent operations on variables and data</li>
-<li>Examples include mathematical and logical</li>
-<li>Typically on the right side of the assignment operator <strong>=</strong></li>
+<h1 id="String-Methods">String Methods<a class="anchor-link" href="#String-Methods">&#182;</a></h1><ul>
+<li>Strings are the most used data types in most applications</li>
+<li>User input is treated as strings then converted to other data types to process</li>
+<li>Strings will have special functions to enable quick processing of strings</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Examples-of-Expressions-With-Operators">Examples of Expressions With Operators<a class="anchor-link" href="#Examples-of-Expressions-With-Operators">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">y</span>
-<span class="n">lblOut</span><span class="p">.</span><span class="n">Text</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.15</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">^</span> <span class="mi">2</span>
-<span class="n">isWorking</span> <span class="o">=</span> <span class="n">isOpen</span> <span class="ow">or</span> <span class="n">isReading</span>
-<span class="n">textMessage</span> <span class="o">=</span> <span class="s">&quot;hello &quot;</span> <span class="o">&amp;</span> <span class="n">name</span> <span class="o">&amp;</span> <span class="s">&quot; your birthday is on &quot;</span> <span class="o">&amp;</span> <span class="n">birthDay</span>
-</pre></div>
-<h3 id="Notice-that-an-operator-can-combine-multiple-values-together,-and-usually-on-the-right-of-an-assignment-operator">Notice that an operator can combine multiple values together, and usually on the right of an assignment operator<a class="anchor-link" href="#Notice-that-an-operator-can-combine-multiple-values-together,-and-usually-on-the-right-of-an-assignment-operator">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Expressions">Expressions<a class="anchor-link" href="#Expressions">&#182;</a></h1><ul>
-<li>Can include multiple variables, expressions, data, and sub/functions<ul>
-<li>Each one is called a term, e.g.:<code>x+5+y</code></li>
+<h1 id="Discovering-String-Functions">Discovering String Functions<a class="anchor-link" href="#Discovering-String-Functions">&#182;</a></h1><ul>
+<li>You can to read the VB documentation</li>
+<li>Google is your friend<ul>
+<li>Search for <strong>visual basic string methods</strong></li>
 </ul>
 </li>
-<li>VB will attempt to convert the type of every term to match the first one<ul>
-<li>Will throw an error if it cannot convert it</li>
-<li>Some programming languages prefer to give an error without conversion</li>
-<li>VB is designed for windows development where lots of conversion to/from strings is done, so convertion is done automatically</li>
+<li>Read also microsoft reference documents for VB<ul>
+<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#string-operations-by-category">here</a>, and <a href="https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/keywords/string-manipulation-summary">here</a></li>
+<li>The documentation is richer, you have to search for what you need.</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operators-In-VB-Ordered-by-Precedence">Operators In VB Ordered by Precedence<a class="anchor-link" href="#Operators-In-VB-Ordered-by-Precedence">&#182;</a></h1><table>
-<thead><tr>
-<th style="text-align:center">Operator</th>
-<th style="text-align:right">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">^</td>
-<td style="text-align:right">Exponentiation</td>
-</tr>
-<tr>
-<td style="text-align:center">+,-</td>
-<td style="text-align:right">Unary identity and negation</td>
-</tr>
-<tr>
-<td style="text-align:center">*,/</td>
-<td style="text-align:right">Multiplication and floating-point division</td>
-</tr>
-<tr>
-<td style="text-align:center">\</td>
-<td style="text-align:right">Integer division</td>
-</tr>
-<tr>
-<td style="text-align:center">Mod</td>
-<td style="text-align:right">Modulus arithmetic</td>
-</tr>
-<tr>
-<td style="text-align:center">+,-</td>
-<td style="text-align:right">Addition and subtraction, string concatenation</td>
-</tr>
-<tr>
-<td style="text-align:center">&amp;</td>
-<td style="text-align:right">String concatenation</td>
-</tr>
-<tr>
-<td style="text-align:center">&gt;,&lt;,&lt;&gt;,&lt;=,&gt;=,=</td>
-<td style="text-align:right">Comparisons <strong>(result is True or False)</strong></td>
-</tr>
-<tr>
-<td style="text-align:center">=</td>
-<td style="text-align:right">Assignment <strong>(No result, but changes the variable on the left side)</strong></td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator-Precedence">Operator Precedence<a class="anchor-link" href="#Operator-Precedence">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
-<span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">z</span>
-<span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">z</span> <span class="err">‘</span><span class="n">you</span> <span class="n">can</span> <span class="n">modify</span> <span class="n">precedence</span> <span class="k">using</span> <span class="p">(</span> <span class="p">)</span>
-<span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">*</span> <span class="n">z</span> <span class="err">‘</span><span class="n">evaluated</span> <span class="n">from</span> <span class="n">left</span> <span class="k">to</span> <span class="n">right</span>
-<span class="n">x</span> <span class="o">/</span> <span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h1><p>Create a program that performs the following tasks</p>
-<ul>
-<li>Convert the temprature (supplied by the user) from F to C and from C to F</li>
-<li>Conversion formula is: F = 9/5*C + 32</li>
-<li>Name the project: tempconvert</li>
+<h1 id="String-Methods-in-VB">String Methods in VB<a class="anchor-link" href="#String-Methods-in-VB">&#182;</a></h1><ul>
+<li>Finding characher/string in a string</li>
+<li>Comparing strings</li>
+<li>Modifying strings</li>
+<li>...more</li>
 </ul>
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Searching-in-strings">Searching in strings<a class="anchor-link" href="#Searching-in-strings">&#182;</a></h1><ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.indexof?view=netframework-4.7.1#System_String_IndexOf_System_String_">String.IndexOf</a> (read documentation first)
+<pre><code>vb
+Dim str As String = "animal"
+Dim index As Integer = str.IndexOf("n")
+Dim index2 As Integer = str.IndexOf("mal")
+Dim index3 As Integer = str.IndexOf("mak")
+' what will index, index2, index3 be?</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Other-Search-Methods">Other Search Methods<a class="anchor-link" href="#Other-Search-Methods">&#182;</a></h1><ul>
+<li>Contains</li>
+<li>lastIndexOf</li>
+<li>StartsWith</li>
+<li>endsWith</li>
+</ul>
+<h3 id="Try-searching-google-for-each-one-to-find-out-what-it-does">Try searching google for each one to find out what it does<a class="anchor-link" href="#Try-searching-google-for-each-one-to-find-out-what-it-does">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comparing-String">Comparing String<a class="anchor-link" href="#Comparing-String">&#182;</a></h1><ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.compare?view=netframework-4.7.1#System_String_Compare_System_String_System_String_">String.Compare(str1, str2)</a></li>
+<li>Return 0 if str1 and str2 are equal</li>
+<li>returns &gt; 0 if str1 precedes str2</li>
+<li>Returns &lt; 0 if str2 follows str2 </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Modifying-Strings">Modifying Strings<a class="anchor-link" href="#Modifying-Strings">&#182;</a></h1><ul>
+<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#modifying-a-string">Modifying Strings documentation</a></li>
+<li>insert, remove, replace</li>
+<li>toLower, toUpper</li>
+<li>trim</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
-<li>Use a single textBox and single output</li>
-</ul>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Another-Exercise">Another Exercise<a class="anchor-link" href="#Another-Exercise">&#182;</a></h1><p>Create a program that perform the following tasks</p>
-<ul>
-<li>Calculate the Body Mass Index</li>
-<li>$BMI = \frac{kg}{m^2}$, where KG is weight in KG, and m is the length in meters</li>
-<li>Based on BMI, tell the user whether he/she is:<ul>
-<li>Underweight: $BMI &lt; 18.5$</li>
-<li>Healthy: $18.5 \leq BMI \leq 25$</li>
-<li>Overweight: $BMI &gt; 25$</li>
-</ul>
-</li>
+<li>Create an application with the following features</li>
+<li>Takes text input from user</li>
+<li>User can convert all text to lower case or upper case</li>
+<li>User can search for a letter or word in the text</li>
+<li>User can replace words/letters with other words/letters</li>
 </ul>
 
 </div>
