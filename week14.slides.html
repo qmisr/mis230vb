@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>week9 slides</title>
+<title>week14 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11825,144 +11825,31 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="String-Methods">String Methods<a class="anchor-link" href="#String-Methods">&#182;</a></h1><ul>
-<li>Strings are the most used data types in most applications</li>
-<li>User input is treated as strings then converted to other data types to process</li>
-<li>Strings will have special functions to enable quick processing of strings</li>
-</ul>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exercises</span>
+</pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Discovering-String-Functions">Discovering String Functions<a class="anchor-link" href="#Discovering-String-Functions">&#182;</a></h1><ul>
-<li>You can to read the VB documentation</li>
-<li>Google is your friend<ul>
-<li>Search for <strong>visual basic string methods</strong></li>
-</ul>
-</li>
-<li>Read also microsoft reference documents for VB<ul>
-<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#string-operations-by-category">here</a>, and <a href="https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/keywords/string-manipulation-summary">here</a></li>
-<li>The documentation is richer, you have to search for what you need.</li>
-</ul>
-</li>
-</ul>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="String-Methods-in-VB">String Methods in VB<a class="anchor-link" href="#String-Methods-in-VB">&#182;</a></h1><ul>
-<li>Finding characher/string in a string</li>
-<li>Comparing strings</li>
-<li>Modifying strings</li>
-<li>...more</li>
-</ul>
 
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Searching-in-strings">Searching in strings<a class="anchor-link" href="#Searching-in-strings">&#182;</a></h1><ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.indexof?view=netframework-4.7.1#System_String_IndexOf_System_String_">String.IndexOf</a> (read documentation first)
-<pre><code>vb
-Dim str As String = "animal"
-Dim index As Integer = str.IndexOf("n")
-Dim index2 As Integer = str.IndexOf("mal")
-Dim index3 As Integer = str.IndexOf("mak")
-' what will index, index2, index3 be?</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Other-Search-Methods">Other Search Methods<a class="anchor-link" href="#Other-Search-Methods">&#182;</a></h1><ul>
-<li>Contains</li>
-<li>lastIndexOf</li>
-<li>StartsWith</li>
-<li>endsWith</li>
-</ul>
-<h3 id="Try-searching-google-for-each-one-to-find-out-what-it-does">Try searching google for each one to find out what it does<a class="anchor-link" href="#Try-searching-google-for-each-one-to-find-out-what-it-does">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Comparing-String">Comparing String<a class="anchor-link" href="#Comparing-String">&#182;</a></h1><ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.compare?view=netframework-4.7.1#System_String_Compare_System_String_System_String_">String.Compare(str1, str2)</a></li>
-<li>Return 0 if str1 and str2 are equal</li>
-<li>returns &gt; 0 if str1 precedes str2</li>
-<li>Returns &lt; 0 if str2 follows str2 </li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Modifying-Strings">Modifying Strings<a class="anchor-link" href="#Modifying-Strings">&#182;</a></h1><ul>
-<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#modifying-a-string">Modifying Strings documentation</a></li>
-<li>insert, remove, replace</li>
-<li>toLower, toUpper</li>
-<li>trim</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
-<li>Create an application with the following features</li>
-<li>Takes text input from user</li>
-<li>For text:<ul>
-<li>User can convert all text to lower case or upper case</li>
-<li>User can search for a letter or word in the text</li>
-<li>User can replace words/letters with other words/letters</li>
-<li>Prevent user from perfoming these functions on Numbers</li>
-</ul>
-</li>
-<li>For Numbers:<ul>
-<li>Find if number is double</li>
-<li>Prevent user from perfoming function on Text</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
 </div></section></section>
 </div>
 </div>

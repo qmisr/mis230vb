@@ -11847,11 +11847,10 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-a-Subroutine">Creating a Subroutine<a class="anchor-link" href="#Creating-a-Subroutine">&#182;</a></h1>
-<pre><code>vb
-Sub SubName() 
-    MSGBox("You called SubName")
-End Sub</code></pre>
+<h1 id="Creating-a-Subroutine">Creating a Subroutine<a class="anchor-link" href="#Creating-a-Subroutine">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Sub</span> <span class="nf">SubName</span><span class="p">()</span> 
+    <span class="n">MSGBox</span><span class="p">(</span><span class="s">&quot;You called SubName&quot;</span><span class="p">)</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
 
 </div>
 </div>
@@ -11861,13 +11860,12 @@ End Sub</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-a-Function">Creating a Function<a class="anchor-link" href="#Creating-a-Function">&#182;</a></h1>
-<pre><code>vb
-Sub FuncName() As Integer 
-    MSGBox("You called FuncName")
-    Return 5  'Can any value, variable, or expresstion that 
-              'is an integer
-End Sub</code></pre>
+<h1 id="Creating-a-Function">Creating a Function<a class="anchor-link" href="#Creating-a-Function">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Sub</span> <span class="nf">FuncName</span><span class="p">()</span> <span class="ow">As</span> <span class="kt">Integer</span> 
+    <span class="n">MSGBox</span><span class="p">(</span><span class="s">&quot;You called FuncName&quot;</span><span class="p">)</span>
+    <span class="k">Return</span> <span class="mi">5</span>  <span class="c">&#39;Can any value, variable, or expresstion that </span>
+              <span class="c">&#39;is an integer</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
 
 </div>
 </div>
@@ -11878,11 +11876,10 @@ End Sub</code></pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Using-Functions/Subroutines">Using Functions/Subroutines<a class="anchor-link" href="#Using-Functions/Subroutines">&#182;</a></h1><ul>
-<li>Just call the name of the Func/Sub with () to run it
-<pre><code>vb
-SubName() 'will execute SubName
-MSGBox("The result from FuncName is "&amp; FuncName()) 'doesnt work
-                                                 'with sub</code></pre>
+<li>Just call the name of the Func/Sub with () to run it<div class="highlight"><pre><span></span><span class="n">SubName</span><span class="p">()</span> <span class="c">&#39;will execute SubName</span>
+<span class="n">MSGBox</span><span class="p">(</span><span class="s">&quot;The result from FuncName is &quot;</span><span class="o">&amp;</span> <span class="n">FuncName</span><span class="p">())</span> <span class="c">&#39;doesnt work</span>
+                                                 <span class="c">&#39;with sub</span>
+</pre></div>
 </li>
 </ul>
 
@@ -11915,30 +11912,13 @@ MSGBox("The result from FuncName is "&amp; FuncName()) 'doesnt work
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Parameter-Example">Parameter Example<a class="anchor-link" href="#Parameter-Example">&#182;</a></h1>
-<pre><code>vb
-Function Add(x As Integer, y As Integer) As Integer
-    return x+y
-End If
+<h1 id="Parameter-Example">Parameter Example<a class="anchor-link" href="#Parameter-Example">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Function</span> <span class="nf">Add</span><span class="p">(</span><span class="n">x</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">y</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Integer</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="k">End</span> <span class="k">If</span>
 
-' to use it
-MsgBox("result is: " &amp; Add(5,6))</code></pre>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example:-Validation-of-TextBoxes">Example: Validation of TextBoxes<a class="anchor-link" href="#Example:-Validation-of-TextBoxes">&#182;</a></h1>
-<pre><code>vb
-Sub ValidateTextbox1()
-    if TextBox1.text = "" Then
-        MsgBox("Textbox is Empty")
-    End If
-End Sub</code></pre>
+<span class="c">&#39; to use it</span>
+<span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;result is: &quot;</span> <span class="o">&amp;</span> <span class="n">Add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
 
 </div>
 </div>
@@ -11948,12 +11928,26 @@ End Sub</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-with-ValidateTextbox1">Problem with ValidateTextbox1<a class="anchor-link" href="#Problem-with-ValidateTextbox1">&#182;</a></h1>
-<pre><code>vb
-ValidateTextbox1()
-' The next statement should run only if input is valid
-MsgBox("The Valid Input is:" &amp; TextBox1.Text)
-' Will it run?</code></pre>
+<h1 id="Example:-Validation-of-TextBoxes">Example: Validation of TextBoxes<a class="anchor-link" href="#Example:-Validation-of-TextBoxes">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Sub</span> <span class="nf">ValidateTextbox1</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">TextBox1</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="k">Then</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Textbox is Empty&quot;</span><span class="p">)</span>
+    <span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-with-ValidateTextbox1">Problem with ValidateTextbox1<a class="anchor-link" href="#Problem-with-ValidateTextbox1">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">ValidateTextbox1</span><span class="p">()</span>
+<span class="c">&#39; The next statement should run only if input is valid</span>
+<span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;The Valid Input is:&quot;</span> <span class="o">&amp;</span> <span class="n">TextBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="c">&#39; Will it run?</span>
+</pre></div>
 
 </div>
 </div>
@@ -11976,15 +11970,14 @@ MsgBox("The Valid Input is:" &amp; TextBox1.Text)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Use-Function-To-Fix-Validation">Use Function To Fix Validation<a class="anchor-link" href="#Use-Function-To-Fix-Validation">&#182;</a></h1>
-<pre><code>vb
-Function ValidateTextbox2() As Boolean
-    if TextBox1.text = "" Then
-        MsgBox("Textbox is Empty")
-        Return False ' If there is a problem return False
-    End If
-    Return True ' Return True if everything is OK!
-End Sub</code></pre>
+<h1 id="Use-Function-To-Fix-Validation">Use Function To Fix Validation<a class="anchor-link" href="#Use-Function-To-Fix-Validation">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Function</span> <span class="nf">ValidateTextbox2</span><span class="p">()</span> <span class="ow">As</span> <span class="kt">Boolean</span>
+    <span class="k">if</span> <span class="n">TextBox1</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="k">Then</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Textbox is Empty&quot;</span><span class="p">)</span>
+        <span class="k">Return</span> <span class="k">False</span> <span class="c">&#39; If there is a problem return False</span>
+    <span class="k">End</span> <span class="k">If</span>
+    <span class="k">Return</span> <span class="k">True</span> <span class="c">&#39; Return True if everything is OK!</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
 
 </div>
 </div>
@@ -11994,12 +11987,11 @@ End Sub</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Use-Function-To-Fix-Validation">Use Function To Fix Validation<a class="anchor-link" href="#Use-Function-To-Fix-Validation">&#182;</a></h1>
-<pre><code>vb
-If ValidateTextbox2() Then
-    ' Now it will only run if ValidateTextbox2() return True
-    MsgBox("The Valid Input is:" &amp; TextBox1.Text)
-End If</code></pre>
+<h1 id="Use-Function-To-Fix-Validation">Use Function To Fix Validation<a class="anchor-link" href="#Use-Function-To-Fix-Validation">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">If</span> <span class="n">ValidateTextbox2</span><span class="p">()</span> <span class="k">Then</span>
+    <span class="c">&#39; Now it will only run if ValidateTextbox2() return True</span>
+    <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;The Valid Input is:&quot;</span> <span class="o">&amp;</span> <span class="n">TextBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="k">End</span> <span class="k">If</span>
+</pre></div>
 
 </div>
 </div>
@@ -12022,15 +12014,14 @@ End If</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Fixing-ValidateTextbox2-With-Parameters">Fixing ValidateTextbox2 With Parameters<a class="anchor-link" href="#Fixing-ValidateTextbox2-With-Parameters">&#182;</a></h1>
-<pre><code>vb
-Function ValidateTextbox3(ByRef txtBox As TextBox) As Boolean
-    if txtBox.text = "" Then
-        MsgBox("Textbox is Empty")
-        Return False ' If there is a problem return False
-    End If
-    Return True ' Return True if everything is OK!
-End Sub</code></pre>
+<h1 id="Fixing-ValidateTextbox2-With-Parameters">Fixing ValidateTextbox2 With Parameters<a class="anchor-link" href="#Fixing-ValidateTextbox2-With-Parameters">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Function</span> <span class="nf">ValidateTextbox3</span><span class="p">(</span><span class="n">txtBox</span> <span class="ow">As</span> <span class="n">TextBox</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Boolean</span>
+    <span class="k">if</span> <span class="n">txtBox</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="k">Then</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Textbox is Empty&quot;</span><span class="p">)</span>
+        <span class="k">Return</span> <span class="k">False</span> <span class="c">&#39; If there is a problem return False</span>
+    <span class="k">End</span> <span class="k">If</span>
+    <span class="k">Return</span> <span class="k">True</span> <span class="c">&#39; Return True if everything is OK!</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
 
 </div>
 </div>
@@ -12040,15 +12031,14 @@ End Sub</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Using-Function-with-Different-TextBoxes">Using Function with Different TextBoxes<a class="anchor-link" href="#Using-Function-with-Different-TextBoxes">&#182;</a></h1>
-<pre><code>vb
-If ValidateTextbox3(TextBox1) Then
-    MsgBox("The Valid Input is:" &amp; TextBox1.Text)
-End If
+<h1 id="Using-Function-with-Different-TextBoxes">Using Function with Different TextBoxes<a class="anchor-link" href="#Using-Function-with-Different-TextBoxes">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">If</span> <span class="n">ValidateTextbox3</span><span class="p">(</span><span class="n">TextBox1</span><span class="p">)</span> <span class="k">Then</span>
+    <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;The Valid Input is:&quot;</span> <span class="o">&amp;</span> <span class="n">TextBox1</span><span class="p">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="k">End</span> <span class="k">If</span>
 
-If ValidateTextbox3(TextBox2) Then
-    MsgBox("The Valid Input is:" &amp; TextBox2.Text)
-End If</code></pre>
+<span class="k">If</span> <span class="n">ValidateTextbox3</span><span class="p">(</span><span class="n">TextBox2</span><span class="p">)</span> <span class="k">Then</span>
+    <span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;The Valid Input is:&quot;</span> <span class="o">&amp;</span> <span class="n">TextBox2</span><span class="p">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="k">End</span> <span class="k">If</span>
+</pre></div>
 
 </div>
 </div>
@@ -12058,10 +12048,17 @@ End If</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Some-Notes">Some Notes<a class="anchor-link" href="#Some-Notes">&#182;</a></h1><ul>
-<li>Use <strong>ByRef</strong> when you want to pass controls as parameters<ul>
-<li>No need to use it with other datatypes</li>
-</ul>
+<h1 id="Other-Ways-To-Validate-Data">Other Ways To Validate Data<a class="anchor-link" href="#Other-Ways-To-Validate-Data">&#182;</a></h1><ul>
+<li>You can also validate the content of the control instead of the control like <em>isNumeric</em> function<div class="highlight"><pre><span></span><span class="k">Function</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">text</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Boolean</span>
+  <span class="k">if</span> <span class="n">text</span> <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="k">Then</span>
+      <span class="k">Return</span> <span class="k">False</span> <span class="c">&#39; If there is a problem return False</span>
+  <span class="k">elseif</span> <span class="k">Not</span> <span class="n">isNumeric</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">Then</span>
+      <span class="k">Return</span> <span class="k">False</span>
+  <span class="k">else</span>
+      <span class="k">Return</span> <span class="k">True</span> <span class="c">&#39; Return True if everything is OK!</span>
+  <span class="k">end</span> <span class="k">if</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</pre></div>
 </li>
 </ul>
 

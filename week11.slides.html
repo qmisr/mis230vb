@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>week9 slides</title>
+<title>week11 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11830,31 +11830,17 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="String-Methods">String Methods<a class="anchor-link" href="#String-Methods">&#182;</a></h1><ul>
-<li>Strings are the most used data types in most applications</li>
-<li>User input is treated as strings then converted to other data types to process</li>
-<li>Strings will have special functions to enable quick processing of strings</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Discovering-String-Functions">Discovering String Functions<a class="anchor-link" href="#Discovering-String-Functions">&#182;</a></h1><ul>
-<li>You can to read the VB documentation</li>
-<li>Google is your friend<ul>
-<li>Search for <strong>visual basic string methods</strong></li>
+<h1 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h1><ul>
+<li>Another Conditional Structure<ul>
+<li>Has condition and code block</li>
 </ul>
 </li>
-<li>Read also microsoft reference documents for VB<ul>
-<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#string-operations-by-category">here</a>, and <a href="https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/keywords/string-manipulation-summary">here</a></li>
-<li>The documentation is richer, you have to search for what you need.</li>
+<li>Repeats the code block while the condition is true<ul>
+<li>How is this different from an if statement?</li>
+<li>When does execution stop?</li>
 </ul>
 </li>
+<li>Most useful with collection, to perform same action on collection items</li>
 </ul>
 
 </div>
@@ -11865,29 +11851,12 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="String-Methods-in-VB">String Methods in VB<a class="anchor-link" href="#String-Methods-in-VB">&#182;</a></h1><ul>
-<li>Finding characher/string in a string</li>
-<li>Comparing strings</li>
-<li>Modifying strings</li>
-<li>...more</li>
+<h1 id="Loops-in-VB">Loops in VB<a class="anchor-link" href="#Loops-in-VB">&#182;</a></h1><ul>
+<li>While Loops: If like condition checked before the start of any iteration <strong>(what is an iteration?)</strong></li>
+<li>Do While loops: If like condition checked at the end of every iteration</li>
+<li>For Loops: Used with collections, condition is implicit, works on all items in a collection until all are exhausted<ul>
+<li>We will mainly use for loops</li>
 </ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Searching-in-strings">Searching in strings<a class="anchor-link" href="#Searching-in-strings">&#182;</a></h1><ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.indexof?view=netframework-4.7.1#System_String_IndexOf_System_String_">String.IndexOf</a> (read documentation first)
-<pre><code>vb
-Dim str As String = "animal"
-Dim index As Integer = str.IndexOf("n")
-Dim index2 As Integer = str.IndexOf("mal")
-Dim index3 As Integer = str.IndexOf("mak")
-' what will index, index2, index3 be?</code></pre>
 </li>
 </ul>
 
@@ -11899,13 +11868,17 @@ Dim index3 As Integer = str.IndexOf("mak")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Other-Search-Methods">Other Search Methods<a class="anchor-link" href="#Other-Search-Methods">&#182;</a></h1><ul>
-<li>Contains</li>
-<li>lastIndexOf</li>
-<li>StartsWith</li>
-<li>endsWith</li>
+<h1 id="For-Loops">For Loops<a class="anchor-link" href="#For-Loops">&#182;</a></h1><ul>
+<li>Used to iterate over collection items</li>
 </ul>
-<h3 id="Try-searching-google-for-each-one-to-find-out-what-it-does">Try searching google for each one to find out what it does<a class="anchor-link" href="#Try-searching-google-for-each-one-to-find-out-what-it-does">&#182;</a></h3>
+<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">nameList</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">List</span><span class="p">(</span><span class="k">Of</span> <span class="kt">String</span><span class="p">)</span> <span class="n">From</span> <span class="p">{</span><span class="s">&quot;mohammed&quot;</span><span class="p">,</span> <span class="s">&quot;ali&quot;</span><span class="p">,</span> <span class="s">&quot;sara&quot;</span><span class="p">}</span>
+
+<span class="k">For</span> <span class="k">Each</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">myList</span><span class="p">:</span> <span class="c">&#39; Where is the condition?</span>
+    <span class="n">MsgBox</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">Next</span> <span class="c">&#39;end of the block</span>
+</pre></div>
+<p>What is x? What is its type?</p>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -11914,11 +11887,32 @@ Dim index3 As Integer = str.IndexOf("mak")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Comparing-String">Comparing String<a class="anchor-link" href="#Comparing-String">&#182;</a></h1><ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.compare?view=netframework-4.7.1#System_String_Compare_System_String_System_String_">String.Compare(str1, str2)</a></li>
-<li>Return 0 if str1 and str2 are equal</li>
-<li>returns &gt; 0 if str1 precedes str2</li>
-<li>Returns &lt; 0 if str2 follows str2 </li>
+<h1 id="Another-Kind-of-For-Loops">Another Kind of For Loops<a class="anchor-link" href="#Another-Kind-of-For-Loops">&#182;</a></h1><ul>
+<li>Used to repeat an action a specific number of times</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">nameList</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">List</span><span class="p">(</span><span class="k">Of</span> <span class="kt">String</span><span class="p">)</span> <span class="n">From</span> <span class="p">{</span><span class="s">&quot;mohammed&quot;</span><span class="p">,</span> <span class="s">&quot;ali&quot;</span><span class="p">,</span> <span class="s">&quot;sara&quot;</span><span class="p">}</span>
+
+<span class="k">For</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">10</span><span class="p">:</span> <span class="c">&#39; Where is the condition?</span>
+    <span class="n">MsgBox</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">Next</span> <span class="c">&#39;end of the block</span>
+</pre></div>
+<p>What is the difference from the previous for loop? Can we use this type to iterate over nameList?</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><p>Create an application that:</p>
+<ul>
+<li>Stores names of contacts</li>
+<li>Allows user to capitalize all names</li>
+<li>Allows user to remove names</li>
+<li>Allows user to sort the names (use two different methods)</li>
+<li>Allows the user to restore all the lost names and reset any changes done to the list</li>
 </ul>
 
 </div>
@@ -11929,11 +11923,12 @@ Dim index3 As Integer = str.IndexOf("mak")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Modifying-Strings">Modifying Strings<a class="anchor-link" href="#Modifying-Strings">&#182;</a></h1><ul>
-<li>See <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.7.1#modifying-a-string">Modifying Strings documentation</a></li>
-<li>insert, remove, replace</li>
-<li>toLower, toUpper</li>
-<li>trim</li>
+<h1 id="Useful-Operations-That-USe-Loops">Useful Operations That USe Loops<a class="anchor-link" href="#Useful-Operations-That-USe-Loops">&#182;</a></h1><ul>
+<li>Counting</li>
+<li>Summing</li>
+<li>Find Min/Max</li>
+<li>Sorting</li>
+<li>Search/Filter</li>
 </ul>
 
 </div>
@@ -11944,21 +11939,73 @@ Dim index3 As Integer = str.IndexOf("mak")
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
-<li>Create an application with the following features</li>
-<li>Takes text input from user</li>
-<li>For text:<ul>
-<li>User can convert all text to lower case or upper case</li>
-<li>User can search for a letter or word in the text</li>
-<li>User can replace words/letters with other words/letters</li>
-<li>Prevent user from perfoming these functions on Numbers</li>
+<h1 id="Counting">Counting<a class="anchor-link" href="#Counting">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">myList</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">List</span><span class="p">(</span><span class="k">Of</span> <span class="kt">Integer</span><span class="p">)</span> <span class="n">From</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="k">Dim</span> <span class="n">intCount</span> <span class="ow">As</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">&#39;must have a counter initialized to zero</span>
+
+<span class="k">For</span> <span class="k">Each</span> <span class="n">x</span> <span class="ow">In</span> <span class="n">myList</span>
+       <span class="n">intCount</span> <span class="o">=</span> <span class="n">intCount</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">Next</span>
+
+<span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Total count: &quot;</span> <span class="o">&amp;</span> <span class="n">intCount</span><span class="p">)</span>
+</pre></div>
+<p>Can you modify to count only odd numbers?</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Summing">Summing<a class="anchor-link" href="#Summing">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">myList</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">List</span><span class="p">(</span><span class="k">Of</span> <span class="kt">Integer</span><span class="p">)</span> <span class="n">From</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="k">Dim</span> <span class="n">intSum</span> <span class="ow">As</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">&#39;must have a summation variable initialized to zero</span>
+
+<span class="k">For</span> <span class="k">Each</span> <span class="n">x</span> <span class="ow">In</span> <span class="n">myList</span>
+       <span class="n">intSum</span> <span class="o">=</span> <span class="n">intSum</span> <span class="o">+</span> <span class="n">x</span>
+<span class="k">Next</span>
+
+<span class="n">MsgBox</span><span class="p">(</span><span class="s">&quot;Total count: &quot;</span> <span class="o">&amp;</span> <span class="n">intSum</span><span class="p">)</span>
+</pre></div>
+<p>Can you modify to sum only even numbers? or numbers less than 10?</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Shopping-List-Exercise">Shopping List Exercise<a class="anchor-link" href="#Shopping-List-Exercise">&#182;</a></h1><ul>
+<li>Create a shopping list that you add items, their quantity, and unit price to the list</li>
+<li>User should be able to remove items from the list</li>
+<li>Include a stats button that shows the total price, total number of items, and average item price</li>
 </ul>
-</li>
-<li>For Numbers:<ul>
-<li>Find if number is double</li>
-<li>Prevent user from perfoming function on Text</li>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Improved-Shopping-List">Improved Shopping List<a class="anchor-link" href="#Improved-Shopping-List">&#182;</a></h1><ul>
+<li>Show only the list of items in a list box, quantity and unit price should not be shown in a ListBox</li>
+<li>Upon selecting an item show the quantity and total item price in a Label</li>
 </ul>
-</li>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Something-to-think-about">Something to think about<a class="anchor-link" href="#Something-to-think-about">&#182;</a></h1><ul>
+<li>What happens if we sort the shopping list?</li>
 </ul>
 
 </div>
