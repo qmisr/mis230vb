@@ -24,3 +24,5 @@
 | 9 | String Methods/Functions  | [Slides](http://qmisr.github.io/mis230vb/week9.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week9.pdf)
 | 10 | Collections  | [Slides](http://qmisr.github.io/mis230vb/week10.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week10.pdf)
 | 11 | Loops  | [Slides](http://qmisr.github.io/mis230vb/week11.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week11.pdf)
+| 11 | Loops  | [Slides](http://qmisr.github.io/mis230vb/week11.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week11.pdf)
+| 12 | File I/O  | [Slides](http://qmisr.github.io/mis230vb/week12.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week12.pdf)
