@@ -11860,14 +11860,15 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-a-Files">Reading a Files<a class="anchor-link" href="#Reading-a-Files">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="s">&quot;c:\path\to\file\data1.txt&quot;</span><span class="p">)</span>
+<h1 id="Reading-a-Files">Reading a Files<a class="anchor-link" href="#Reading-a-Files">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span>
+                    <span class="s">&quot;c:\path\to\file\data1.txt&quot;</span><span class="p">)</span>
 </pre></div>
 <ul>
 <li>This command will store all the data in the file in variable data</li>
 <li><strong>data</strong> will be a string even though we did not mention that</li>
 <li>Try to display content of data</li>
+<li><strong>Important:</strong> Remember to replace path\to\file with the correct path on your computer</li>
 </ul>
-<p><strong>Important:</strong> Remember to replace path\to\file with the correct path on your computer</p>
 
 </div>
 </div>
