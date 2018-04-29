@@ -12044,6 +12044,25 @@ Sara,80,2</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Parsing-a-CSV-(another-way)">Parsing a CSV (another way)<a class="anchor-link" href="#Parsing-a-CSV-(another-way)">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">fileName</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;c:\path\to\data.csv&quot;</span>
+<span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
+<span class="k">Dim</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="n">vbNewLine</span><span class="p">)</span> <span class="c">&#39; split into list of string</span>
+<span class="k">For</span> <span class="k">Each</span> <span class="n">record</span> <span class="ow">In</span> <span class="n">txt</span>
+        <span class="c">&#39;split each line into its values</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c">&#39;name</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c">&#39;grade</span>
+        <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c">&#39;absence</span>
+ <span class="k">Next</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><p>Modify the previous program for reading data.csv to perform the following</p>
 <ul>
 <li>Display 3 lists (use ListBoxes here), for names, grades, and absences</li>
