@@ -12049,6 +12049,7 @@ Sara,80,2</code></pre>
 <span class="k">Dim</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="n">vbNewLine</span><span class="p">)</span> <span class="c">&#39; split into list of string</span>
 <span class="k">For</span> <span class="k">Each</span> <span class="n">record</span> <span class="ow">In</span> <span class="n">txt</span>
         <span class="c">&#39;split each line into its values</span>
+        <span class="k">Dim</span> <span class="n">values</span> <span class="o">=</span> <span class="n">Record</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
         <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c">&#39;name</span>
         <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c">&#39;grade</span>
         <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c">&#39;absence</span>
