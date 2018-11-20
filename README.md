@@ -25,5 +25,5 @@
 | 10 | Collections  | [Slides](http://qmisr.github.io/mis230vb/week10.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week10.pdf)
 | 11 | Loops  | [Slides](http://qmisr.github.io/mis230vb/week11.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week11.pdf)
 | 12 | Dictionaries  | [Slides](http://qmisr.github.io/mis230vb/week12.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week12.pdf)
-| 12 | Custom Data Structures  | [Slides](http://qmisr.github.io/mis230vb/week13.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week13.pdf)
-| 12 | File I/O  | [Slides](http://qmisr.github.io/mis230vb/week14.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week14.pdf)
+| 13 | Custom Data Structures  | [Slides](http://qmisr.github.io/mis230vb/week13.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week13.pdf)
+| 14 | File I/O  | [Slides](http://qmisr.github.io/mis230vb/week14.slides.html) - [Pdf](http://qmisr.github.io/mis230vb/week14.pdf)
