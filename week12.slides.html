@@ -13242,363 +13242,127 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="File-I/O">File I/O<a class="anchor-link" href="#File-I/O">&#182;</a></h1><ul>
-<li>File input is reading the content of a file into memory (a variable)</li>
-<li>File output is writing the content of a variable or variables into a file</li>
-<li>File content can be text or binary</li>
-<li>We will be working only with text files</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-a-Files">Reading a Files<a class="anchor-link" href="#Reading-a-Files">&#182;</a></h1><ul>
-<li>Download <a href="http://qmisr.github.io/mis230vb/data1.txt">data1.txt</a> and place it on the desktop</li>
-<li>Right click on the file then select properties</li>
-<li>Copy the file path</li>
-</ul>
-<p><strong>Note:</strong> File paths are different in different operating systems (e.g. mac)</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-a-Files">Reading a Files<a class="anchor-link" href="#Reading-a-Files">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span>
-                    <span class="s">&quot;c:\path\to\file\data1.txt&quot;</span><span class="p">)</span>
-</pre></div>
-<ul>
-<li>This command will store all the data in the file in variable data</li>
-<li><strong>data</strong> will be a string even though we did not mention that</li>
-<li>Try to display content of data</li>
-<li><strong>Important:</strong> Remember to replace path\to\file with the correct path on your computer</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Working-With-Lines">Working With Lines<a class="anchor-link" href="#Working-With-Lines">&#182;</a></h1><ul>
-<li>Sometimes it is better to work with each line separatly<ul>
-<li>For example: We might store each record in a separate line</li>
+<h1 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h1><ul>
+<li>Stores a key <strong>and</strong> value pair<ul>
+<li>You cannot store one without the other</li>
 </ul>
 </li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="n">vbNewLine</span><span class="p">)</span> <span class="c">&#39;split the lines into a list</span>
-<span class="k">For</span> <span class="k">Each</span> <span class="n">x</span> <span class="ow">In</span> <span class="n">txt</span>
-    <span class="c">&#39;Work with each line</span>
-    <span class="n">MsgBox</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="c">&#39;you can even split line and work with values</span>
-<span class="k">Next</span>
-</pre></div>
-<p><strong>Note:</strong> txt is now a List of Strings</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><p>Try to display the list of strings in a ListBox</p>
-<p>Look at the data, can you write a program to read the information of each student (name and grade)</p>
-<p>Will it be easy?</p>
-<p>What would you change about the organization of the data to make writing a program to read it easier?</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Better-Organized-Data">Better Organized Data<a class="anchor-link" href="#Better-Organized-Data">&#182;</a></h1><ul>
-<li>Look at <a href="http://qmisr.github.io/mis230vb/names.txt">names.txt</a> and <a href="http://qmisr.github.io/mis230vb/grades.txt">grades.txt</a></li>
-<li>Is it easier to write a program to read the data for each student?</li>
-<li>Add two lists to display the data</li>
-<li>Which grade belongs to which student?<ul>
-<li><strong>Important:</strong> Data for the same student must be on the same line</li>
+<li>Values are retreived by keys, e.g.:<ul>
+<li>Student record can be fetched by student id</li>
+<li>Product price can be fetched by product name or id</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Standard-Ways-of-Organizing-Textual-Data">Standard Ways of Organizing Textual Data<a class="anchor-link" href="#Standard-Ways-of-Organizing-Textual-Data">&#182;</a></h1><ul>
-<li>This is called <strong>file format</strong></li>
-<li>Most common file formats include XML, JSON, a CSV<ul>
-<li>List is probably endless</li>
+<h1 id="Dictionaries-Cont.">Dictionaries Cont.<a class="anchor-link" href="#Dictionaries-Cont.">&#182;</a></h1><ul>
+<li>Values can be changed, but keys cannot</li>
+<li>Keys can be number sequences like lists, e.g.: 1,2,3<ul>
+<li>But if you delete an entry, the other entries will not be shifted</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="XML-Example">XML Example<a class="anchor-link" href="#XML-Example">&#182;</a></h1><div class="highlight"><pre><span></span><span class="nt">&lt;student&gt;</span>
-    <span class="nt">&lt;name&gt;</span>mohammed<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;grade&gt;</span>90<span class="nt">&lt;/grade&gt;</span>
-    <span class="nt">&lt;absence&gt;</span>1<span class="nt">&lt;/absence&gt;</span>
-<span class="nt">&lt;/student&gt;</span>
-<span class="nt">&lt;student&gt;</span>
-    <span class="nt">&lt;name&gt;</span>Ahmed<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;grade&gt;</span>80<span class="nt">&lt;/grade&gt;</span>
-    <span class="nt">&lt;absence&gt;</span>2<span class="nt">&lt;/absence&gt;</span>
-<span class="nt">&lt;/student&gt;</span>
+<h1 id="Creating-dictionaries-in-VB">Creating dictionaries in VB<a class="anchor-link" href="#Creating-dictionaries-in-VB">&#182;</a></h1><div class="highlight"><pre><span></span><span class="c">&#39;Empty Dictionary</span>
+<span class="k">Dim</span> <span class="n">myDict</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">Dictionary</span><span class="p">(</span><span class="k">Of</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">)</span>
+
+<span class="c">&#39;Adding/Replacing elements are the same</span>
+<span class="n">myDict</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">7000</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">item</span><span class="p">(</span><span class="s">&quot;F150&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Focus&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">myDict</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9000</span> <span class="c">&#39;Replace value, why?</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="JSON-Example">JSON Example<a class="anchor-link" href="#JSON-Example">&#182;</a></h1><div class="highlight"><pre><span></span><span class="p">[</span>
-  <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mohammed&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;grade&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
-        <span class="nt">&quot;absence&quot;</span><span class="p">:</span> <span class="mi">1</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ali&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;grade&quot;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
-        <span class="nt">&quot;absence&quot;</span><span class="p">:</span> <span class="mi">2</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+<h1 id="Dictionaries-in-VB">Dictionaries in VB<a class="anchor-link" href="#Dictionaries-in-VB">&#182;</a></h1><div class="highlight"><pre><span></span><span class="c">&#39;Counting elements</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">count</span>
+
+<span class="c">&#39;Accessing elements</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">item</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span> <span class="c">&#39;returns 9000</span>
+<span class="n">myDict</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span> <span class="c">&#39; also returns 9000</span>
 </pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CSV-Example">CSV Example<a class="anchor-link" href="#CSV-Example">&#182;</a></h1>
-<pre><code>csv
-name,grade,absence
-Mohammad,95,1
-Ahmed,90,0
-Khaled,85,3
-Sara,80,2</code></pre>
+<h1 id="Dictionaries-in-VB">Dictionaries in VB<a class="anchor-link" href="#Dictionaries-in-VB">&#182;</a></h1><div class="highlight"><pre><span></span><span class="c">&#39;Checking for element (always by key)</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">containsKey</span><span class="p">(</span><span class="s">&quot;mustang&quot;</span><span class="p">)</span>  <span class="c">&#39;returns False</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">containsKey</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span>  <span class="c">&#39;returns Talse</span>
+
+<span class="c">&#39;Delete element (always by key, associated value is removed)</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-CSV-Files">Reading CSV Files<a class="anchor-link" href="#Reading-CSV-Files">&#182;</a></h1><ul>
-<li>Download the file <a href="http://qmisr.github.io/mis230vb/data.csv">data.csv</a></li>
-<li>Read it into variable <strong>grades</strong></li>
-<li>Display each line in a separate MsgBox</li>
-<li>Instead of displaying MsgBox, we process the data line by line and extract the information<ul>
-<li>This is called <strong>parsing</strong> the text file</li>
+<h1 id="Dictionaries-and-Lists">Dictionaries and Lists<a class="anchor-link" href="#Dictionaries-and-Lists">&#182;</a></h1><ul>
+<li>Don't forget to read the vb.net documentation and discover how you can use them</li>
+<li>When you need to maintain order of records, use <strong>lists</strong></li>
+<li>When you do not need order, and you have information that identifies a record (e.g. student id), you can use <strong>dictionaries</strong>.</li>
+<li>See <a href="http://www.dotnetperls.com">http://www.dotnetperls.com</a> for useful hints</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Shopping-List-Exercise">Shopping List Exercise<a class="anchor-link" href="#Shopping-List-Exercise">&#182;</a></h1><ul>
+<li>Create a shopping list that you add items, their quantity, and unit price to the list</li>
+<li>Only display the items in a list, the quantity and unit price should be stored in separate dictionaries in memmory<ul>
+<li>Hint: use shopping item name as key</li>
 </ul>
 </li>
+<li>When you select an item, display the quantity and the unit price for that item in the same textboxes used to enter the data</li>
+<li>User should be able to remove items from the list</li>
+<li>Show the total price for the shopping list, total number of items, and average item price</li>
+<li>Allow user to update the values for selected entries.</li>
+<li>Allow user to sort the list</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Parsing-a-CSV">Parsing a CSV<a class="anchor-link" href="#Parsing-a-CSV">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">fileName</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;c:\path\to\data.csv&quot;</span>
-<span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-<span class="k">Dim</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="n">vbNewLine</span><span class="p">)</span> <span class="c">&#39; split into list of string</span>
-<span class="k">For</span> <span class="k">Each</span> <span class="n">record</span> <span class="ow">In</span> <span class="n">txt</span>
-        <span class="c">&#39;split each line into its values</span>
-        <span class="k">Dim</span> <span class="n">values</span> <span class="o">=</span> <span class="n">Record</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
-         <span class="k">For</span> <span class="k">Each</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span>
-            <span class="n">MsgBox</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="c">&#39; Here we examine the value </span>
-         <span class="k">Next</span>
- <span class="k">Next</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Parsing-a-CSV-(another-way)">Parsing a CSV (another way)<a class="anchor-link" href="#Parsing-a-CSV-(another-way)">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">fileName</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;c:\path\to\data.csv&quot;</span>
-<span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-<span class="k">Dim</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="n">vbNewLine</span><span class="p">)</span> <span class="c">&#39; split into list of string</span>
-<span class="k">For</span> <span class="k">Each</span> <span class="n">record</span> <span class="ow">In</span> <span class="n">txt</span>
-        <span class="c">&#39;split each line into its values</span>
-        <span class="k">Dim</span> <span class="n">values</span> <span class="o">=</span> <span class="n">Record</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
-        <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c">&#39;name</span>
-        <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c">&#39;grade</span>
-        <span class="n">MsgBox</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c">&#39;absence</span>
- <span class="k">Next</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><p>Modify the previous program for reading data.csv to perform the following</p>
-<ul>
-<li>Display 3 lists (use ListBoxes here), for names, grades, and absences</li>
-<li>Add button to load data.csv into these lists</li>
-<li>Add controls to allow the user to add another student record<ul>
-<li>Remember, student must have name, grade, and absence</li>
-<li>Don't forget input validation</li>
+<h1 id="More-advanced-shopping-list">More advanced shopping list<a class="anchor-link" href="#More-advanced-shopping-list">&#182;</a></h1><ul>
+<li>Create an application with two different types of users:<ul>
+<li>Sales manager</li>
+<li>Shopper</li>
 </ul>
 </li>
-<li>Add a button to same the list back into data.csv with any new data</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Differt Way To Get The Path</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Writing-to-A-File">Writing to A File<a class="anchor-link" href="#Writing-to-A-File">&#182;</a></h1><div class="highlight"><pre><span></span><span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="k">False</span><span class="p">)</span>
-</pre></div>
-<ul>
-<li><strong>filePath</strong> is the location of the file as a string (just like reading the file)</li>
-<li><strong>data</strong> is a String variable that contains all your data</li>
-<li><strong>False</strong> at the end means that you do not want to append to the file, but create a new one even if the data exists</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Writing-to-A-File">Writing to A File<a class="anchor-link" href="#Writing-to-A-File">&#182;</a></h1><p>Create a button to perform the following action:</p>
-<div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">filePath</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;c:\path\to\file\myfile.txt&quot;</span>
-<span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;Hello Files!&quot;</span>
-<span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="k">False</span><span class="p">)</span>
-</pre></div>
-<p>Modify the filePath so that the new file is created on the desktop.</p>
-<p>Examine the contents of the file, what do you see?</p>
-<p>Click the button multiple times then see what happens to the file.</p>
-<p>Replace False with True then click multiple times to see what happens to the file</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-Do-We-Store-CSV">How Do We Store CSV<a class="anchor-link" href="#How-Do-We-Store-CSV">&#182;</a></h1><p>Think about what we are trying to do:</p>
-<ul>
-<li>We want the data for each student in a line</li>
-<li>The line will contain name, grade, then absence</li>
-<li>Data is separated by a comma</li>
-<li>Order of data is important</li>
-<li>Store it to a String variable</li>
-<li>Store the content of the variable in a file</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Writing-To-CSV">Writing To CSV<a class="anchor-link" href="#Writing-To-CSV">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">dataList</span> <span class="ow">as</span> <span class="k">new</span> <span class="n">List</span><span class="p">(</span><span class="k">Of</span> <span class="kt">String</span><span class="p">)</span>
-
-<span class="c">&#39; We need the index for all listboxes, use for loop not for each</span>
-<span class="c">&#39; Add all the records to a list of string</span>
-<span class="k">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">to</span> <span class="n">lstNames</span><span class="p">.</span><span class="n">Count</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">Dim</span> <span class="n">record</span> <span class="o">=</span> <span class="n">lstNames</span><span class="p">.</span><span class="n">items</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s">&quot;,&quot;</span> <span class="o">&amp;</span> <span class="n">lstGrades</span><span class="p">.</span><span class="n">items</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s">&quot;,&quot;</span> <span class="n">lstAbsence</span><span class="p">.</span><span class="n">items</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="n">csvData</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-<span class="k">Next</span>
-
-<span class="c">&#39; Combine each item in the list into a string and seperate with vbnewline</span>
-<span class="k">Dim</span> <span class="n">dataString</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">String</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span><span class="n">vbNewLine</span><span class="p">,</span> <span class="n">dataList</span><span class="p">)</span>
-<span class="c">&#39; Store the data</span>
-<span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="s">&quot;c:\path\to\file\mydata.csv&quot;</span><span class="p">,</span> <span class="n">dataString</span><span class="p">,</span> <span class="k">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="File-Selector">File Selector<a class="anchor-link" href="#File-Selector">&#182;</a></h1><ul>
-<li>Use it as a way to let the user select the file path</li>
-<li>No need to remember what the path is or look for it</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="File-Selector">File Selector<a class="anchor-link" href="#File-Selector">&#182;</a></h1><div class="highlight"><pre><span></span><span class="c">&#39; very important, added at the very top before the class</span>
-<span class="k">Imports</span> <span class="nn">Microsoft.Win32</span>
-
-<span class="c">&#39;Create Dialog instance</span>
-<span class="k">Dim</span> <span class="n">dlg</span> <span class="ow">As</span> <span class="n">OpenFileDialog</span> <span class="o">=</span> <span class="k">New</span> <span class="n">OpenFileDialog</span><span class="p">()</span>
-
-<span class="c">&#39; If you want to save to a file, add the following line:</span>
-<span class="c">&#39; dlg.CheckFileExists = False </span>
-<span class="c">&#39; It allows you to select non-existent file so you can save to it</span>
-
-<span class="c">&#39;Show the dialog</span>
-<span class="k">If</span> <span class="n">dlg</span><span class="p">.</span><span class="n">ShowDialog</span> <span class="k">Then</span>
-    <span class="c">&#39;This stored the selected path by the user into fileName</span>
-    <span class="k">Dim</span> <span class="n">fileName</span> <span class="ow">as</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">dlg</span><span class="p">.</span><span class="n">FileName</span>
-
-    <span class="c">&#39;You have the path, now you can read the data</span>
-    <span class="k">Dim</span> <span class="n">data</span> <span class="o">=</span> <span class="n">My</span><span class="p">.</span><span class="n">Computer</span><span class="p">.</span><span class="n">FileSystem</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-<span class="k">End</span> <span class="k">If</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><p>Modify the programs you built this week to use the file selector</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Challenge">Challenge<a class="anchor-link" href="#Challenge">&#182;</a></h1><ul>
-<li>Create an application to allow the instructor to enter student grades only</li>
-<li>Calculate the statistics (min, max, average) for the grades</li>
-<li>Add the ability to store the data</li>
-<li>Add the ability to read the data</li>
-<li>Use file selector</li>
+<li>Sales manager can add items and unit prices</li>
+<li>Sales manager can update/delete items from list of products</li>
+<li>Shopper can select from available items to add to his/her shopping list</li>
+<li>Shopper can select quantity of each item</li>
+<li>Shopper can view items, the quntity, their unit prices, and the item total prices each as a list</li>
+<li>Shopper can view total cost</li>
+<li>Shopper can remove items from shopping list</li>
 </ul>
 
 </div>
