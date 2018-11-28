@@ -13280,8 +13280,9 @@ a.anchor-link {
 <span class="c">&#39;Adding/Replacing elements are the same</span>
 <span class="n">myDict</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">7000</span>
 <span class="n">myDict</span><span class="p">.</span><span class="n">item</span><span class="p">(</span><span class="s">&quot;F150&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">5000</span>
-<span class="n">myDict</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Focus&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Focus&quot;</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
 <span class="n">myDict</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9000</span> <span class="c">&#39;Replace value, why?</span>
+<span class="n">myDict</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Focus&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span> <span class="c">&#39; this one will fail, why?</span>
 </pre></div>
 
 </div>
@@ -13310,6 +13311,31 @@ a.anchor-link {
 
 <span class="c">&#39;Delete element (always by key, associated value is removed)</span>
 <span class="n">myDict</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Initializing-Dictionaries-With-Values">Initializing Dictionaries With Values<a class="anchor-link" href="#Initializing-Dictionaries-With-Values">&#182;</a></h1><div class="highlight"><pre><span></span><span class="k">Dim</span> <span class="n">myDict</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">Dictionary</span><span class="p">(</span><span class="k">Of</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Integer</span><span class="p">)</span> <span class="n">From</span> <span class="p">{</span>
+    <span class="p">{</span><span class="s">&quot;Mustang&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">&quot;F150&quot;</span><span class="p">,</span> <span class="mi">7000</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">&quot;Focus&quot;</span><span class="p">,</span> <span class="mi">4000</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Looping-Over-Dictionary-Items">Looping Over Dictionary Items<a class="anchor-link" href="#Looping-Over-Dictionary-Items">&#182;</a></h1><p>Notice how the loop variable <strong>x</strong> has a <code>x.Key</code> and <code>x.Value</code> properties that allow you to get to the key and value</p>
+<div class="highlight"><pre><span></span><span class="k">For</span> <span class="k">Each</span> <span class="n">x</span> <span class="ow">In</span> <span class="n">myDict</span>
+    <span class="n">MsgBox</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">Key</span> <span class="o">&amp;</span> <span class="s">&quot;: &quot;</span> <span class="o">&amp;</span> <span class="n">x</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
+<span class="k">Next</span>
 </pre></div>
 
 </div>
@@ -13407,7 +13433,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="To-Hide-Form2">To Hide Form2<a class="anchor-link" href="#To-Hide-Form2">&#182;</a></h1><ul>
-<li>Use the command <code>Me.Hide()</code> inside Form2 itself<ul>
+<li>Use the command <code>Me.Close()</code> inside Form2 itself<ul>
 <li>Add it to a button subroutine    </li>
 </ul>
 </li>
